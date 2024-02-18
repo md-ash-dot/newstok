@@ -1,0 +1,132 @@
+[
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2024-01-04T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2024-01-13T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2024-01-05T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2024-01-13T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2024-01-05T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2024-01-14T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2023-12-05T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2023-12-13T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2023-11-06T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2023-11-15T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2023-10-07T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2023-10-15T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2023-09-08T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2023-09-15T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2023-08-08T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2023-08-16T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2023-07-09T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2023-07-17T09:31:59.441Z",
+        }
+    },
+    {
+        "model": "news.article",
+        "pk": null,
+        "fields" {
+            "title": "",
+            "slug": "",
+            "author": 1,
+            "content": "",
+            "created_on": "2023-06-10T13:51:34.009Z",
+            "excerpt": "",
+            "updated_on": "2023-06-18T09:31:59.441Z",
+        }
+    }
+]
