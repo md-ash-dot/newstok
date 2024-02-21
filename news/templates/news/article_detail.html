@@ -40,11 +40,15 @@
     <!-- Display share button to copy link to clipboard -->
     <div>
       <button type="button" class="btn btn-primary" onclick="geturl()">SHARE</button>
-      <script>function geturl() {
+      <script>function geturl(){
         const currentUrl = window.location.href;
         navigator.clipboard.writeText(currentUrl);
       }</script>
+      <div class="alert alert-primary" role="alert">
+        Link to this aticle copied to clipboard and ready to SHARE!
+        </div>
       <p>Click SHARE to copy article link to clipboard</p>
+      
     </div>
     <!-- Displaying count of comments -->
   <div class="row">
