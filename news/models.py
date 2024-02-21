@@ -3,11 +3,13 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
+CATEGORY = ((0, "General"), (2, "Technology"), (3, "Business"), (4, "Science"))
 
 # Create your models here.
 class Article(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
+    category = models.IntegerField(choices=CATEGORY, default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="news_articles")
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
