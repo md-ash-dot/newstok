@@ -39,7 +39,7 @@
     </div>
     <!-- Display share button to copy link to clipboard -->
     <div>
-      <button type="button" onclick="geturl()">SHARE</button>
+      <button type="button" class="btn btn-primary" onclick="geturl()">SHARE</button>
       <script>function geturl() {
         const currentUrl = window.location.href;
         navigator.clipboard.writeText(currentUrl);
