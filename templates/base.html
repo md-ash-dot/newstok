@@ -4,6 +4,7 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'user_profile' as profile_url %}
 
 
 <!DOCTYPE html>
@@ -51,6 +52,15 @@
                         <a class="nav-link {% if request.path == about_url %}active{%endif%}" aria-current="page"
                           href="{% url 'about' %}">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a
+                          class="nav-link
+                          {% if request.path == profile_url %}active{%endif%}"
+                          aria-current="page"
+                          href="{% url 'user_profile' %}"
+                          >Profile</a
+                        >
+                      </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
