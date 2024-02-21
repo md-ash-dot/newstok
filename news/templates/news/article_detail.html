@@ -37,6 +37,15 @@
             </div>
         </div>
     </div>
+    <!-- Display share button to copy link to clipboard -->
+    <div>
+      <button type="button" onclick="geturl()">SHARE</button>
+      <script>function geturl() {
+        const currentUrl = window.location.href;
+        navigator.clipboard.writeText(currentUrl);
+      }</script>
+      <p>Click SHARE to copy article link to clipboard</p>
+    </div>
     <!-- Displaying count of comments -->
   <div class="row">
     <div class="col-12">
