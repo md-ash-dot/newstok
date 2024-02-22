@@ -74,7 +74,7 @@ def upvote_article(request, slug):
     if request.user in article.upvoted_users.all():
         """ If the user has already upvoted, remove the upvote """
         article.upvotes -= 1
-        article.upvoted_users.add(request.user)
+        article.upvoted_users.remove(request.user)
     else:
         """ If the user hasn't upvoted, add the upvote """
         article.upvotes += 1
@@ -82,8 +82,8 @@ def upvote_article(request, slug):
         """ If the user had previously downvoted, remove the downvote """
         if request.user in article.downvoted_users.all():
             article.downvotes -= 1
-            article.downvoted_users.add(request.user)
-
+            article.downvoted_users.remove(request.user)
+        
     article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
