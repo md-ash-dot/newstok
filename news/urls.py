@@ -11,5 +11,6 @@ urlpatterns = [
      path('article', views.new_article, name='new_article'),
      path('<slug:slug>/upvote/', views.upvote_article, name='upvote_article'),
      path('<slug:slug>/downvote/', views.downvote_article, name='downvote_article'),
+     path('category/<int:category_id>', views.ArticleList.as_view(), name='article_list_by_category'),
 ]
 

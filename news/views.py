@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.utils.text import slugify
 from .models import Article, Comment
 from .forms import CommentForm, ArticleForm
 
@@ -9,16 +10,17 @@ from .forms import CommentForm, ArticleForm
 
 
 class ArticleList(generic.ListView):
-    queryset = Article.objects.filter(status=1)
+    #queryset = Article.objects.filter(status=1)
     template_name = "news/index.html"
     paginate_by = 6
-"""     context_object_name = 'lists'
 
     def get_queryset(self):
-        myset = {
-            "general": Article.objects.filter(category=0),
-            "technology": Article.objects.filter(category=1),
-        } """
+        category_id = self.kwargs.get('category_id')
+        if category_id is not None:
+            queryset = Article.objects.filter(status=1, category=category_id)
+        else:
+            queryset = Article.objects.filter(status=1)
+        return queryset
 
 
 def article_detail(request, slug):
@@ -153,6 +155,7 @@ def new_article(request):
         article_form = ArticleForm(data=request.POST)
         if article_form.is_valid():
             article = article_form.save(commit=False)
+            article.slug = slugify(article.title)
             article.author = request.user
             article.save()
             
