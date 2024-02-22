@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Article, Comment
-from .forms import CommentForm
+from .forms import CommentForm, ArticleForm
 
 # Create your views here.
 
@@ -97,3 +97,25 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
     return HttpResponseRedirect(request.META.get('HTTP_REFERER','/'))
     
+
+def new_article(request):
+    """
+    view to delete comment
+    """
+    if request.method == "POST":
+        article_form = ArticleForm(data=request.POST)
+        if article_form.is_valid():
+            article = article_form.save(commit=False)
+            article.author = request.user
+            article.save()
+            
+    article_form = ArticleForm()
+
+    return render(
+        request,
+        "news/new_article.html",
+        {   
+            "new_article": new_article,
+            "article_form": article_form
+        },
+    )
