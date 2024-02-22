@@ -13,6 +13,11 @@
         <!-- We want a for loop inside the empty control tags
           to iterate through each comment in comments -->
         {% for comment in comment_list %}
+       
+        <a href="{% url 'article_detail' comment.article.slug %}" class="article-link">
+            <h2 class="card-title">{{ comment.article.title }}</h2>
+            
+        </a>
         <div class="p-2 comments
           {% if not comment.approved and comment.author == user %}
           faded{% elif not comment.approved %} d-none{% endif %}">
