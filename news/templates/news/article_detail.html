@@ -37,20 +37,21 @@
             </div>
         </div>
     </div>
-    <!-- Display share button to copy link to clipboard -->
-    <div>
-      <button type="button" class="btn btn-primary" onclick="geturl()">SHARE</button>
+    <!-- Displaying share button to copy link to clipboard -->
+    <div class="d-grid gap-2 d-md-block">
+      <button type="button" class="btn btn-outline-success" onclick="geturl()">SHARE</button>
       <script>function geturl(){
         const currentUrl = window.location.href;
         navigator.clipboard.writeText(currentUrl);
-        document.getElementById("share-button").classList.remove('d-none');
-        document.getElementById("share-message").classList.add('d-none');
+        document.getElementById("share-button-clicked").classList.remove('d-none');
+        document.getElementById("share-button-message").classList.add('d-none');
       }</script>
-      <div id="share-button" class="alert alert-primary d-none" role="alert">
-        Link to this aticle copied to clipboard and ready to SHARE!
-        </div>
-      <div class="alert alert-primary" id="share-message">Click SHARE to copy article link to clipboard</div>
-      
+      <div id="share-button-clicked" class="alert alert-primary d-none" role="alert">
+        Link to this article copied to clipboard and ready to SHARE!
+      </div>
+      <div class="alert alert-primary" id="share-button-message">
+        Click SHARE to copy article link to clipboard
+      </div>
     </div>
     <!-- Displaying count of comments -->
   <div class="row">
