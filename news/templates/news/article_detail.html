@@ -43,11 +43,13 @@
       <script>function geturl(){
         const currentUrl = window.location.href;
         navigator.clipboard.writeText(currentUrl);
+        document.getElementById("share-button").classList.remove('d-none');
+        document.getElementById("share-message").classList.add('d-none');
       }</script>
-      <div class="alert alert-primary" role="alert">
+      <div id="share-button" class="alert alert-primary d-none" role="alert">
         Link to this aticle copied to clipboard and ready to SHARE!
         </div>
-      <p>Click SHARE to copy article link to clipboard</p>
+      <div class="alert alert-primary" id="share-message">Click SHARE to copy article link to clipboard</div>
       
     </div>
     <!-- Displaying count of comments -->
