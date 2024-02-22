@@ -37,6 +37,37 @@
             </div>
         </div>
     </div>
+
+     <!-- Upvote and Downvote buttons -->
+    <!-- form method="post" action="{% url 'upvote_article' article.slug %}">
+      {% csrf_token %}
+      <button type="submit">UP-VOTE</button>
+    </form> -->
+    <!-- Score counter -->
+    <!-- <p>SCORE: {{ article.score }}</p>
+    <form method="post" action="{% url 'downvote_article' article.slug %}">
+      {% csrf_token %}
+      <button type="submit">DOWN-VOTE</button>
+    </form> -->
+    <div>   
+      {% if user.is_authenticated %}
+      <h3>Vote:</h3>
+      <p>Logged in as: {{ user.username }}</p>
+      <form method="post" action="{% url 'upvote_article' article.slug %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary btn-sm">UP-VOTE</button>
+      </form>
+      <p>Score: {{ article.score }}</p>
+      <form method="post" action="{% url 'downvote_article' article.slug %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-secondary btn-sm">DOWN-VOTE</button>
+      </form>
+      {% else %}
+      <p>Log in to vote</p>
+      {% endif %}
+    </div>
+
+
     <!-- Displaying share button to copy link to clipboard -->
     <div class="d-grid gap-2 d-md-block">
       <button type="button" class="btn btn-outline-success" onclick="geturl()">SHARE</button>

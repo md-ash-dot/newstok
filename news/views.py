@@ -12,6 +12,13 @@ class ArticleList(generic.ListView):
     queryset = Article.objects.filter(status=1)
     template_name = "news/index.html"
     paginate_by = 6
+"""     context_object_name = 'lists'
+
+    def get_queryset(self):
+        myset = {
+            "general": Article.objects.filter(category=0),
+            "technology": Article.objects.filter(category=1),
+        } """
 
 
 def article_detail(request, slug):
@@ -57,6 +64,19 @@ def article_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
+
+def upvote_article(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    article.upvotes += 1
+    article.save()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+def downvote_article(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    article.downvotes += 1
+    article.save()
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 def comment_edit(request, slug, comment_id):

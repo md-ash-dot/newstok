@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
-CATEGORY = ((0, "General"), (2, "Technology"), (3, "Business"), (4, "Science"))
+CATEGORY = ((0, "General"), (1, "Technology"), (2, "Business"), (3, "Science"))
 
 # Create your models here.
 class Article(models.Model):
@@ -17,12 +17,17 @@ class Article(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+    upvotes = models.PositiveIntegerField(default=0)
+    downvotes = models.IntegerField(default=0)
 
     class Meta:
         ordering = ["-created_on"]
     def __str__(self):
         return f"{self.title} | written by {self.author}"
-
+    def total_votes(self):
+        return self.upvotes + self.downvotes
+    def score(self):
+        return self.upvotes - self.downvotes
 
 class Comment(models.Model):
     article = models.ForeignKey(
