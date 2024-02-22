@@ -69,21 +69,40 @@ def article_detail(request, slug):
 def upvote_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
     
-    if not article.has_user_upvoted(request.user):
+    if request.user in article.upvoted_users.all():
+        """ If the user has already upvoted, remove the upvote """
+        article.upvotes -= 1
+        article.upvoted_users.add(request.user)
+    else:
+        """ If the user hasn't upvoted, add the upvote """
         article.upvotes += 1
         article.upvoted_users.add(request.user)
-        article.save()
+        """ If the user had previously downvoted, remove the downvote """
+        if request.user in article.downvoted_users.all():
+            article.downvotes -= 1
+            article.downvoted_users.add(request.user)
 
+    article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 def downvote_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
 
-    if not article.has_user_downvoted(request.user):
+    if request.user in article.downvoted_users.all():
+        """ If the user has already downvoted, remove the downvote """
+        article.downvotes -= 1
+        article.downvoted_users.remove(request.user)
+    else:
+        """ If the user hasn't downvoted, add the downvote """
         article.downvotes += 1
         article.downvoted_users.add(request.user)
-        article.save()
 
+        """ If the user had previously upvoted, remove the upvote """
+        if request.user in article.upvoted_users.all():
+            article.upvotes -= 1
+            article.upvoted_users.remove(request.user)
+
+    article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
