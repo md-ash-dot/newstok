@@ -19,6 +19,9 @@ class Article(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     upvotes = models.PositiveIntegerField(default=0)
     downvotes = models.IntegerField(default=0)
+    upvoted_users = models.ManyToManyField(User, related_name='upvoted_articles', blank=True)
+    downvoted_users = models.ManyToManyField(User, related_name='downvoted_articles', blank=True)
+
 
     class Meta:
         ordering = ["-created_on"]
@@ -28,6 +31,12 @@ class Article(models.Model):
         return self.upvotes + self.downvotes
     def score(self):
         return self.upvotes - self.downvotes
+    def has_user_upvoted(self, user):
+        return user in self.upvoted_users.all()
+    def has_user_downvoted(self, user):
+        return user in self.downvoted_users.all()
+
+    
 
 class Comment(models.Model):
     article = models.ForeignKey(

@@ -68,14 +68,22 @@ def article_detail(request, slug):
 
 def upvote_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
-    article.upvotes += 1
-    article.save()
+    
+    if not article.has_user_upvoted(request.user):
+        article.upvotes += 1
+        article.upvoted_users.add(request.user)
+        article.save()
+
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 def downvote_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
-    article.downvotes += 1
-    article.save()
+
+    if not article.has_user_downvoted(request.user):
+        article.downvotes += 1
+        article.downvoted_users.add(request.user)
+        article.save()
+
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
