@@ -2,6 +2,7 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-    path('', views.user_profile, name='user_profile'),
+    path('', views.ArticleList.as_view(), name='user_profile_posts'),
+    path('comments', views.CommentList.as_view(), name='user_profile_comments'),
 ]
 
