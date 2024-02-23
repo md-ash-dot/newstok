@@ -6,11 +6,12 @@ from news.models import Article, Comment
 from news.forms import CommentForm
 
 
+# Create your views here.
 class ArticleList(generic.ListView):
     template_name = "user_profile/user_profile_posts.html"
     paginate_by = 6
     def get_queryset(self):
-        return Article.objects.filter(author=self.request.user)
+        return Article.objects.filter(status=1).filter(author=self.request.user)
 
 class CommentList(generic.ListView):
     template_name = "user_profile/user_profile_comments.html"
@@ -22,14 +23,4 @@ class CommentList(generic.ListView):
 
 
 
-# Create your views here.
-""" def user_profile(request):
 
-    if request.user.is_authenticated:
-        return render(
-            request,
-            "user_profile/user_profile.html"
-        )
-    else:
-        return HttpResponseRedirect('../')
- """

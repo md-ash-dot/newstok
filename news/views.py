@@ -160,7 +160,7 @@ def comment_delete(request, slug, comment_id):
 
 def new_article(request):
     """
-    view to delete comment
+    view to new article
     """
     if request.method == "POST":
         article_form = ArticleForm(data=request.POST)
