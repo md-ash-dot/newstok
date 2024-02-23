@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<a href="{% url 'user_profile_comments' %}"><button type="button" class="btn btn-primary">COMMENTS</button></a>
+<a href="{% url 'user_profile_comments' %}"><button type="button" class="btn btn-primary">GO TO YOUR COMMENTS</button></a>
 
 
 <!-- index.html content starts here -->
@@ -11,6 +11,7 @@
 
         <!-- News Entries Column -->
         <div class="col-12 mt-3 left">
+            <h3>My Posts:</h3>
             <div class="row">
                 {% for article in article_list %}
                 <div class="col-md-4">
