@@ -37,18 +37,7 @@
             </div>
         </div>
     </div>
-
-     <!-- Upvote and Downvote buttons -->
-    <!-- form method="post" action="{% url 'upvote_article' article.slug %}">
-      {% csrf_token %}
-      <button type="submit">UP-VOTE</button>
-    </form> -->
-    <!-- Score counter -->
-    <!-- <p>SCORE: {{ article.score }}</p>
-    <form method="post" action="{% url 'downvote_article' article.slug %}">
-      {% csrf_token %}
-      <button type="submit">DOWN-VOTE</button>
-    </form> -->
+    
     <div>   
       {% if user.is_authenticated %}
       <h3>Vote:</h3>

@@ -11,6 +11,8 @@ urlpatterns = [
      path('article', views.new_article, name='new_article'),
      path('<slug:slug>/upvote/', views.upvote_article, name='upvote_article'),
      path('<slug:slug>/downvote/', views.downvote_article, name='downvote_article'),
-     path('category/<int:category_id>', views.ArticleList.as_view(), name='article_list_by_category'),
+     path('category/general', views.ArticleListByGeneral.as_view(), name='general'),
+     path('category/business', views.ArticleListByBusiness.as_view(), name='business'),
+     path('category/technology', views.ArticleListByTechnology.as_view(), name='technology'),
+     path('category/science', views.ArticleListByScience.as_view(), name='science'), 
 ]
-

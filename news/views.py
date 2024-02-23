@@ -10,18 +10,29 @@ from .forms import CommentForm, ArticleForm
 
 
 class ArticleList(generic.ListView):
-    #queryset = Article.objects.filter(status=1)
+    queryset = Article.objects.filter(status=1)
     template_name = "news/index.html"
     paginate_by = 6
 
-    def get_queryset(self):
-        category_id = self.kwargs.get('category_id')
-        if category_id is not None:
-            queryset = Article.objects.filter(status=1, category=category_id)
-        else:
-            queryset = Article.objects.filter(status=1)
-        return queryset
+class ArticleListByGeneral(generic.ListView):
+    queryset = Article.objects.filter(status=1).filter(category=0)
+    template_name = "news/index.html"
+    paginate_by = 6
 
+class ArticleListByTechnology(generic.ListView):
+    queryset = Article.objects.filter(status=1).filter(category=1)
+    template_name = "news/index.html"
+    paginate_by = 6
+
+class ArticleListByBusiness(generic.ListView):
+    queryset = Article.objects.filter(status=1).filter(category=2)
+    template_name = "news/index.html"
+    paginate_by = 6
+
+class ArticleListByScience(generic.ListView):
+    queryset = Article.objects.filter(status=1).filter(category=3)
+    template_name = "news/index.html"
+    paginate_by = 6
 
 def article_detail(request, slug):
     """
