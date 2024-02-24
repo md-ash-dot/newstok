@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.views import generic
 from .models import Testimonial
 from .forms import TestimonialForm
@@ -18,6 +19,7 @@ def testimonial(request):
         if testimonial_form.is_valid():
             testimonial = testimonial_form.save(commit=False)
             testimonial.save()
+            messages.success(request, "Your testimonial form has been submitted")
             return redirect("testimonial")
     else:
         testimonial_form = TestimonialForm()
