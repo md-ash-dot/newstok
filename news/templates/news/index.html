@@ -26,16 +26,6 @@
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <a href="{% url 'article_detail' article.slug %}" class="article-link">
-                                    <h2 class="card-title text-center">{{ article.title }}</h2></a>
-                                </li>
-                                <li class="list-group-item">
-                                    <p class="card-text text-muted h6 text-end">{{ article.created_on }}</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <p class="card-text">{{ article.excerpt|truncatewords:35 }}</p>
-                                </li>
-                                <li class="list-group-item">
                                     {% if article.category == 0 %}
                                     <p class="card-text">General</p>
                                     {% elif article.category == 1 %}
@@ -45,6 +35,16 @@
                                     {% elif article.category == 3 %}
                                     <p class="card-text">Science</p>
                                     {% endif %}
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="{% url 'article_detail' article.slug %}" class="article-link">
+                                    <h2 class="card-title text-center">{{ article.title }}</h2></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <p class="card-text text-muted h6 text-end">{{ article.created_on }}</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p class="card-text">{{ article.excerpt|truncatewords:35 }}</p>
                                 </li>
                             </ul>
                         </div>
