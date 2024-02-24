@@ -19,7 +19,6 @@ def testimonial(request):
             testimonial = testimonial_form.save(commit=False)
             testimonial.save()
 
-    """ testimonial = Testimonial.objects.all().order_by('-updated_on').first() """
     testimonial_form = TestimonialForm()
 
     return render(
@@ -30,3 +29,6 @@ def testimonial(request):
             "testimonial_form": testimonial_form
         },
     )
+
+
+    """ testimonial = Testimonial.objects.all().order_by('-updated_on').first() """

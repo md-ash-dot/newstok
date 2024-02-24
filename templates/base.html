@@ -35,7 +35,7 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">
                 <img src="/static/images/talk.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -62,29 +62,34 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active{%endif%}" aria-current="page"
+                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
                           href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == testimonial_url %}active{%endif%}" aria-current="page"
+                        <a class="nav-link {% if request.path == testimonial_url %}active{% endif %}" aria-current="page"
                           href="{% url 'testimonial' %}">Testimonial</a>
-                      </li>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                         href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == user_profile_url %}active{% endif %}" aria-current="page" href="{% url 'user_profile_posts' %}">Profile</a>
+                        <a class="nav-link {% if request.path == user_profile_url %}active{% endif %}" aria-current="page"
+                         href="{% url 'user_profile_posts' %}">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == new_article_url %}active{% endif %}" aria-current="page" href="{% url 'new_article' %}">Submit New Article</a>
+                        <a class="nav-link {% if request.path == new_article_url %}active{% endif %}" aria-current="page"
+                         href="{% url 'new_article' %}">Submit New Article</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                         href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                         href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
 
@@ -124,7 +129,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer mt-auto py-3 bg-dark">
         <p class="m-0 text-center text-white">Copyright 2024 Muhammed Ashfaaq</p>
         <p class="m-0 text-center text-white">Follow us:
             <a href="https://facebook.com" target="_blank" rel="noopener"
