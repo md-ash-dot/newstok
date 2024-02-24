@@ -36,10 +36,12 @@ body {
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
+    top: 5%;
     min-width: 30%;
-    left: -2px;
+    border-radius: 5% 23% 5% 25%;
+    right: -2px;
     background-color: #05419a;
+    opacity: .8;
 }
 
 .scale {
