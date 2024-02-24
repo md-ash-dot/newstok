@@ -35,6 +35,17 @@
                                 <li class="list-group-item">
                                     <p class="card-text">{{ article.excerpt|truncatewords:35 }}</p>
                                 </li>
+                                <li class="list-group-item">
+                                    {% if article.category == 0 %}
+                                    <p class="card-text">General</p>
+                                    {% elif article.category == 1 %}
+                                    <p class="card-text">Technology</p>
+                                    {% elif article.category == 2 %}
+                                    <p class="card-text">Business</p>
+                                    {% elif article.category == 3 %}
+                                    <p class="card-text">Science</p>
+                                    {% endif %}
+                                </li>
                             </ul>
                         </div>
                     </div>
