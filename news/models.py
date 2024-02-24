@@ -21,7 +21,7 @@ class Article(models.Model):
     downvotes = models.IntegerField(default=0)
     upvoted_users = models.ManyToManyField(User, related_name='upvoted_articles', blank=True)
     downvoted_users = models.ManyToManyField(User, related_name='downvoted_articles', blank=True)
-
+    approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["-created_on"]
