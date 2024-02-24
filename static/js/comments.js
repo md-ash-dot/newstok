@@ -40,8 +40,10 @@ for (let button of editButtons) {
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
       let commentId = e.target.getAttribute("comment_id");
-      deleteConfirm.href = `delete_comment/${commentId}`;
+      let slug = e.target.getAttribute("slug");
+      deleteConfirm.href = `../${slug}/delete_comment/${commentId}`;
       deleteModal.show();
     });
   }
 
+ 
