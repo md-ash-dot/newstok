@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Testimonial
 from .forms import TestimonialForm
@@ -18,14 +18,14 @@ def testimonial(request):
         if testimonial_form.is_valid():
             testimonial = testimonial_form.save(commit=False)
             testimonial.save()
-
-    testimonial_form = TestimonialForm()
-
+            return redirect("testimonial")
+    else:
+        testimonial_form = TestimonialForm()
+    
     return render(
         request,
-        "testimonial/testimonial.html",
+        "testimonial/new_testimonial.html",
         {
-            "testimonial": testimonial,
             "testimonial_form": testimonial_form
         },
     )

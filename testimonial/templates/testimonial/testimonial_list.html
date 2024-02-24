@@ -8,6 +8,9 @@
   <div class="row">
       <!-- News Entries Column -->
       <div class="col-12 mt-3 left">
+        <div>
+            <a href="{% url 'new_testimonial' %}"><button>NEW TESTIMONAIL</button></a>
+        </div>
           <div class="row">
             {% for testimonial in object_list %}
             <div class="col-md-4">
@@ -55,20 +58,6 @@
   {% endif %}
 </div>
 {% endautoescape %}
-<div class="row justify-content-center">
-  <div class="col-12 col-md-6 my-5">
-      <h2>We would love to hear about what you think about NewsTok</h2>
-      <p>Thank you for being part of our community and for taking the time to contribute. 
-        Your testimonials may be featured on our website to showcase the real voices of our readers.</p>
-
-      <!-- add your form here. Your submit button should 
-                          have the classes of btn, btn-secondary -->
-      <form method="post">
-        {{ testimonial_form | crispy }}
-        {% csrf_token %}
-        <button class="btn btn-secondary" type="submit">Submit</button>
-      </form>
-  </div>
 
 {% endblock %}
 
