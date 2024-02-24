@@ -157,3 +157,16 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+.alert {
+    width:45%; 
+    margin-top:10px;   
+ }
+
+ .btn-outline-success {
+    margin-top:10px; 
+ }
+
+ .score {
+    margin-top:10px; 
+ }

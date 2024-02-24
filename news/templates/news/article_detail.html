@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    
+    <!-- Displaying upvote and downvote buttons and score counter -->
     <div>   
       {% if user.is_authenticated %}
       <h3>Vote:</h3>
@@ -46,10 +46,12 @@
           {% csrf_token %}
           <button type="submit" class="btn btn-primary btn-sm">UP-VOTE</button>
       </form>
-      <p>Score: {{ article.score }}</p>
+      <div class="score">
+        <p>Score: {{ article.score }}</p>
+      </div>
       <form method="post" action="{% url 'downvote_article' article.slug %}">
           {% csrf_token %}
-          <button type="submit" class="btn btn-secondary btn-sm">DOWN-VOTE</button>
+          <button type="submit" class="btn btn-primary btn-sm vote">DOWN-VOTE</button>
       </form>
       {% else %}
       <p>Log in to vote</p>
@@ -58,19 +60,21 @@
 
 
     <!-- Displaying share button to copy link to clipboard -->
-    <div class="d-grid gap-2 d-md-block">
-      <button type="button" class="btn btn-outline-success" onclick="geturl()">SHARE</button>
-      <script>function geturl(){
-        const currentUrl = window.location.href;
-        navigator.clipboard.writeText(currentUrl);
-        document.getElementById("share-button-clicked").classList.remove('d-none');
-        document.getElementById("share-button-message").classList.add('d-none');
-      }</script>
-      <div id="share-button-clicked" class="alert alert-primary d-none" role="alert">
-        Link to this article copied to clipboard and ready to SHARE!
-      </div>
-      <div class="alert alert-primary" id="share-button-message">
-        Click SHARE to copy article link to clipboard
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-outline-success" onclick="geturl()">SHARE</button>
+        <script>function geturl(){
+          const currentUrl = window.location.href;
+          navigator.clipboard.writeText(currentUrl);
+          document.getElementById("share-button-clicked").classList.remove('d-none');
+          document.getElementById("share-button-message").classList.add('d-none');
+        }</script>
+        <div id="share-button-clicked" class="alert alert-primary d-none" role="alert">
+          Link to this article copied to clipboard and ready to SHARE!
+        </div>
+        <div class="alert alert-primary" id="share-button-message">
+          Click SHARE to copy article link to clipboard.
+        </div>
       </div>
     </div>
     <!-- Displaying count of comments -->
