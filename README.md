@@ -1,39 +1,173 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# NEWSTOK NEWS WEBSITE
+[NEWSTOK NEWS WEBSITE](https://github.com/md-ash-dot/newstok)
 
-Welcome,
+ABOUT
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive mockup](/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## USER EXPERIENCE
 
-## Codeanywhere Reminders
+### USER GOALS
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- The user should easily understand
 
-`python3 -m http.server`
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### DESIGN
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+The design of the 
 
-`http_server`
+#### TYPOGRAPHY
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The font families used are 
+ 
+### WIREFRAMES
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Wireframes were designed using Lucidcharts's online wireframe tool.
+![Wire frames](/)
+ 
+## FEATURES
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### EXISTING FEATURES
 
-To log into the Heroku toolbelt CLI:
+- **NAVIGATION**
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - The navigation is very simple and easy.
+  - 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- **LANDING PAGE**
 
----
+  - The landing page displays the name of the website, which takes center stage.
+  - 
+  
+![Landing page](/)
 
-Happy coding!
+- **HOME PAGE**
+
+  - The 
+
+![Game choice display area](/)
+
+- **DETAIL VIEW**
+
+  - The 
+
+![Computer score counter](/)
+![Player score counter](/)
+
+- **ABOUT PAGE**
+  - The 
+  
+![Game choice buttons](/)
+
+- **COLLABORATE FORM**
+  - The 
+
+![Restart button](/)
+
+- **NEW ARTICLE**
+  - A
+
+![Computer wins message](/)
+![Player wins message](/)
+
+- **USER PROFILE**
+  - The 
+
+![Rules section](/)
+
+### FEATURES LEFT TO IMPLEMENT
+
+- Separate section displaying messages 
+
+### RESPONSIVE DESIGN
+
+The website uses a responsive design for users to enjoy it across devices. The website maintains a well-laid-out structure without changing the function and feel on different devices like mobiles, tablets, and desktops.
+
+- DESKTOP (Macbook)
+  
+![Responsive desktop](/)
+
+- TABLET (iPad mini)
+  
+![Responsive tablet](/)
+
+- MOBILE (Galaxy S8+)
+  
+![Responsive mobile](/)
+
+## TESTING
+
+- This website has been tested to check if it works on different browsers such as Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, and Samsung Internet.
+- The website has been tested using the dev tools device toolbar on the browser to check if it functions and looks good on all standard screen sizes, showing it uses a responsive design.
+- All text on the website has been checked to see if it is readable and easy to understand.
+- All the game choice buttons on the website, used to play the game have been tested and is in good working order.
+- The restart button in the website has been tested to see if it resets the score, the player, and computer images, clears the winner message, and repopulates the game choice buttons.
+- The score counter has been tested to see if it is incrementing properly on each victory.
+- The score counter has been tested to see if scores are not incremented in the event of a draw.
+- The game has been tested to see if the player and computer have random chances of winning.
+
+### VALIDATOR TESTING
+
+- HTML
+
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
+
+![HTML Validator](/)
+
+- css
+
+  - No errors were found when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
+
+![css Validator](/)
+
+- JSHint
+
+  - No major errors were found except for " " is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz), when passing through the official [JSHint code quality tool](https://jshint.com/)
+
+- ACCESSIBILITY
+  
+  - The colours and fonts used are easy to read and checked using lighthouse in dev tools for mobile and desktop.
+  - Lighthouse desktop.
+
+![Accessibility score](/)
+
+ - Lighthouse mobile.
+
+![Accessibility score](/)
+
+## BUGS
+
+### SOLVED BUGS
+
+- The s.
+
+  - Fix: T
+
+- The buttons
+
+  - Fix: Errors were 
+
+-
+
+## DEPLOYMENT
+
+- This site was deployed using Heroku. The steps used to deploy are:
+  - In 
+
+The live link can be found here - [NEWSTOK]()
+
+## CREDITS
+
+### CODE
+
+- The
+
+### MEDIA
+- All fonts used on the website. - [google fonts](https://fonts.google.com/)
+- Icons used for the game choice buttons. - [icon library](https://icon-library.com/)
+- Wireframes were created using Lucidchart's online wireframe maker. -[lucid chart](https://www.lucidchart.com/pages/landing/wireframe-software?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_bmm_&km_CPC_CampaignId=1490375424&km_CPC_AdGroupID=55688906577&km_CPC_Keyword=%2Blucid%20chart%20%2Bwireframe&km_CPC_MatchType=b&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=475760219039&km_CPC_TargetID=kwd-467383918265&km_CPC_Country=9044957&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gclid=CjwKCAjwxaanBhBQEiwA84TVXCOZ25eNUeSYYoYKF_NLT8P31RTGKZoFXjLCmZri5FDf4GIh3FxJAhoCB_QQAvD_BwE)
+
+### PROJECT SUPPORT
+- I would like to thank my mentor Akshat Garg from Code Institute for his support, guidance, and help in planning and building this project.
+- I would like to thank all the Code Institute tutors for their support, guidance, and help in solving code issues, debugging, and solving all technical issues faced in building this project.
+- I would like to thank Code Institute for providing me with the necessary lessons and resources to help me build my skills to build this project.
