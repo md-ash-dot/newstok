@@ -10,26 +10,41 @@ from .forms import CommentForm, ArticleForm
 
 
 class ArticleList(generic.ListView):
+    """
+    Article List View
+    """
     queryset = Article.objects.filter(status=1)
     template_name = "news/index.html"
     paginate_by = 6
 
 class ArticleListByGeneral(generic.ListView):
+    """
+    Article List View of General articles
+    """
     queryset = Article.objects.filter(status=1).filter(category=0)
     template_name = "news/index.html"
     paginate_by = 6
 
 class ArticleListByTechnology(generic.ListView):
+    """
+    Article List View of Technology articles
+    """
     queryset = Article.objects.filter(status=1).filter(category=1)
     template_name = "news/index.html"
     paginate_by = 6
 
 class ArticleListByBusiness(generic.ListView):
+    """
+    Article List View of Business articles
+    """
     queryset = Article.objects.filter(status=1).filter(category=2)
     template_name = "news/index.html"
     paginate_by = 6
 
 class ArticleListByScience(generic.ListView):
+    """
+    Article List View of Science articles
+    """
     queryset = Article.objects.filter(status=1).filter(category=3)
     template_name = "news/index.html"
     paginate_by = 6
@@ -80,6 +95,9 @@ def article_detail(request, slug):
 
 
 def upvote_article(request, slug):
+    """
+    Up-vote an Article
+    """
     article = get_object_or_404(Article, slug=slug)
     
     if request.user in article.upvoted_users.all():
@@ -99,6 +117,9 @@ def upvote_article(request, slug):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 def downvote_article(request, slug):
+    """
+    Down-vote an Article
+    """
     article = get_object_or_404(Article, slug=slug)
 
     if request.user in article.downvoted_users.all():

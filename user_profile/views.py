@@ -8,12 +8,18 @@ from news.forms import CommentForm
 
 # Create your views here.
 class ArticleList(generic.ListView):
+    """
+    User profile Articles List View
+    """
     template_name = "user_profile/user_profile_posts.html"
     paginate_by = 6
     def get_queryset(self):
         return Article.objects.filter(status=1).filter(author=self.request.user)
 
 class CommentList(generic.ListView):
+    """
+    User profile Comments List View
+    """
     template_name = "user_profile/user_profile_comments.html"
     paginate_by = 6
     def get_queryset(self):

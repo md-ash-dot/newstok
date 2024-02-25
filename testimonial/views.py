@@ -7,12 +7,15 @@ from .forms import TestimonialForm
 # Create your views here.
 
 class TestimonialList(generic.ListView):
+    """
+    Testimonial List View
+    """
     queryset = Testimonial.objects.filter(status=1)
     template_name = "testimonial_list.html"
 
 def testimonial(request):
     """
-    Renders the Testimonial page
+    Renders the Testimonial form page
     """
     if request.method == "POST":
         testimonial_form = TestimonialForm(data=request.POST)
@@ -31,6 +34,3 @@ def testimonial(request):
             "testimonial_form": testimonial_form
         },
     )
-
-
-    """ testimonial = Testimonial.objects.all().order_by('-updated_on').first() """
