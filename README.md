@@ -93,7 +93,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 ![Computer score counter](/)
 ![Player score counter](/)
 
-- **Register PAGE**
+- **REGISTER PAGE**
 
   - The register page diplays a mesasge to sign up or to log in if the user already holds an account, along with a link to sign in.
   - The account registration form can be found right below to message.
@@ -104,7 +104,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 
 - **LOGIN PAGE**
 
-  - The login page displays a message, welcoming the user and to log in if they would like to comment or like an article or to sign up if they don't already have an account.
+  - The login page displays a message, welcoming the user and to log in if they would like to comment, vote, and submit a new article or to sign up if they don't already have an account.
   - The login form can be seen right below the message.
   - The forms holds the username, password and remember me fields with a button to sign to the user's account.
   
@@ -112,9 +112,10 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 
 - **ABOUT PAGE**
 
-  - The login page displays a message, welcoming the user and to log in if they would like to comment or like an article or to sign up if they don't already have an account.
-  - The login form can be seen right below the message.
-  - The forms holds the username, password and remember me fields with a button to sign to the user's account.
+  - The about page shows an image uploaded by the admin.
+  - The About text can be found right next to the image, which speaks about the platform and the creator of the platform.
+  - The let's collaborate form can be found right beneath it.
+  - The collaborate form has name, email and message fields along a button to submit the collaboration request.
 
 - **COLLABORATE FORM**
   - The 
