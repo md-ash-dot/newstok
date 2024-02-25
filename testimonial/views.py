@@ -8,14 +8,31 @@ from .forms import TestimonialForm
 
 class TestimonialList(generic.ListView):
     """
-    Testimonial List View
+    Displays Testimonials in a List View from 
+    :model:`testimonial.Testimonial`.
+    `
+    **Context**
+
+    ``queryset``
+        A filter of testimonial with satus 1 published.
+    **TEMPLATE**
+
+    :template:`testimonial_list.html`
     """
     queryset = Testimonial.objects.filter(status=1)
     template_name = "testimonial_list.html"
 
 def testimonial(request):
     """
-    Renders the Testimonial form page
+    Renders the Testimonial form page for users to submit a testimonial.
+
+    **Context**
+
+    ``testimonial_form``
+        The instance of :form:`testimonial.TestimonialForm`.
+    **TEMPLATE**
+
+    :template:`testimonial/new_testimonial.html`
     """
     if request.method == "POST":
         testimonial_form = TestimonialForm(data=request.POST)

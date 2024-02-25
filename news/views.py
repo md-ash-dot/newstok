@@ -11,7 +11,17 @@ from .forms import CommentForm, ArticleForm
 
 class ArticleList(generic.ListView):
     """
-    Article List View
+    Displays Articles in a List View.
+
+    **Context**
+
+    ``queryset``
+        A filter of articles with satus 1 published.
+    ``paginate_by``
+        Pagination by a value of 6.
+    **Template:**
+
+    :template:`news/index.html`
     """
     queryset = Article.objects.filter(status=1)
     template_name = "news/index.html"
@@ -19,7 +29,17 @@ class ArticleList(generic.ListView):
 
 class ArticleListByGeneral(generic.ListView):
     """
-    Article List View of General articles
+    Displays General Articles in a List View.
+
+    **Context**
+
+    ``queryset``
+        Two filters of articles with satus 1 published and category 0.
+    ``paginate_by``
+        Pagination by a value of 6.
+    **Template:**
+
+    :template:`news/index.html`
     """
     queryset = Article.objects.filter(status=1).filter(category=0)
     template_name = "news/index.html"
@@ -27,7 +47,17 @@ class ArticleListByGeneral(generic.ListView):
 
 class ArticleListByTechnology(generic.ListView):
     """
-    Article List View of Technology articles
+    Displays Technology Articles in a List View.
+
+    **Context**
+
+    ``queryset``
+        Two filters of articles with satus 1 published and category 1.
+    ``paginate_by``
+        Pagination by a value of 6.
+    **Template:**
+
+    :template:`news/index.html`
     """
     queryset = Article.objects.filter(status=1).filter(category=1)
     template_name = "news/index.html"
@@ -35,7 +65,17 @@ class ArticleListByTechnology(generic.ListView):
 
 class ArticleListByBusiness(generic.ListView):
     """
-    Article List View of Business articles
+    Displays Business Articles in a List View.
+
+    **Context**
+
+    ``queryset``
+        Two filters of articles with satus 1 published and category 2.
+    ``paginate_by``
+        Pagination by a value of 6.
+    **Template:**
+
+    :template:`news/index.html`
     """
     queryset = Article.objects.filter(status=1).filter(category=2)
     template_name = "news/index.html"
@@ -43,7 +83,17 @@ class ArticleListByBusiness(generic.ListView):
 
 class ArticleListByScience(generic.ListView):
     """
-    Article List View of Science articles
+    Displays Science Articles in a List View.
+
+    **Context**
+
+    ``queryset``
+        Two filters of articles with satus 1 published and category 3.
+    ``paginate_by``
+        Pagination by a value of 6.
+    **Template:**
+
+    :template:`news/index.html`
     """
     queryset = Article.objects.filter(status=1).filter(category=3)
     template_name = "news/index.html"
@@ -51,12 +101,18 @@ class ArticleListByScience(generic.ListView):
 
 def article_detail(request, slug):
     """
-    Display an individual :model:`article.Post`.
+    Display an individual :model:`news.Article`.
 
     **Context**
 
     ``article``
-        An instance of :model:`article.Post`.
+        An instance of :model:`news.Article`.
+    ``comments``
+        All approved comments related to the article.
+    ``comment_count``
+        A count of approved comments related to the article.
+    ``comment_form``
+        An instance of :form:`news.CommentForm`.
 
     **Template:**
 
@@ -96,7 +152,12 @@ def article_detail(request, slug):
 
 def upvote_article(request, slug):
     """
-    Up-vote an Article
+    Up-vote an individual article.
+
+    **Context**
+
+    ``article``
+        An instance of :model:`news.Article`.
     """
     article = get_object_or_404(Article, slug=slug)
     
@@ -118,7 +179,12 @@ def upvote_article(request, slug):
 
 def downvote_article(request, slug):
     """
-    Down-vote an Article
+    Down-vote an individual article.
+
+    **Context**
+
+    ``article``
+        An instance of :model:`news.Article`.
     """
     article = get_object_or_404(Article, slug=slug)
 
@@ -142,7 +208,16 @@ def downvote_article(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    Display an individual comment for edit.
+
+    **Context**
+
+    ``article``
+        An instance of :model:`news.Article`.
+    ``comment``
+        A single comment related to the article.
+    ``comment_form``
+        An instance of :form:`news.CommentForm`.
     """
     if request.method == "POST":
 
@@ -165,7 +240,14 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    Delete an individual comment.
+
+    **Context**
+
+    ``article``
+        An instance of :model:`news.Article`.
+    ``comment``
+        A single comment related to the article.
     """
     queryset = Article.objects.filter(status=1)
     article = get_object_or_404(queryset, slug=slug)
@@ -181,7 +263,18 @@ def comment_delete(request, slug, comment_id):
 
 def new_article(request):
     """
-    view to new article
+    Display a form for submitting a new article to :model:`news.Article`.
+
+    **Context**
+
+    ``article``
+        An instance of :model:`news.Article`.
+    ``article_form``
+        An instance of :form:`news.ArticleForm`.
+
+    **Template:**
+
+    :template:`news/new_article.html`
     """
     if request.method == "POST":
         article_form = ArticleForm(data=request.POST)
