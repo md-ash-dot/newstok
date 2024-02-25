@@ -9,16 +9,35 @@ ABOUT
 
 ### USER GOALS
 
-- The user should easily understand
-
+- Understand the purpose of the website on landing on it.
+- Easily navigate around the website.
+- View published articles on the home page.
+- Visit an article's detail page to view it's comtent.
+- Select a category, so they can view the articles of the selected category.
+- Find and visit all the social media sites by opening it in a different tab.
+- Visit the about page to read the website owner's about content.
+- Fill out a form to send a collaboration request.
+- Visit the testimonials page to read published testomials.
+- Fill out a testimonial form and submit it.
+- Register for an account to log in to the website.
+- Log in and log out from the website.
+- Visit the New article page to read the guidelines for submitting an article.
+- As a logged-in user, submit a new article.
+- On opening an article, up-vote or down-vote on it.
+- View the vote score of an article.
+- Comment on an article after opening it.
+- Edit a comment and delete a comment.
+- Visit the user profile page to see the logged-in user's article posts.
+- View all the comments posted by the logged-in user.
+- Edit and delete comments from the user profile page.
 
 ### DESIGN
 
-The design of the 
+NewsTok is a thoughtfully crafted website that embodies the principles of design thinking, placing a strong emphasis on addressing users' needs and challenges. By adopting an empathetic approach, learning from the content provided by Code Institute, I have gained a deep understanding of users' perspectives, ensuring that the platform is intuitive and user-friendly. The website not only serves as a repository for news articles but also actively involves users in the content creation process. Through features like user registration, collaboration requests, article submissions, commenting, and voting, NewsTok empowers its community to actively engage with the platform. The incorporation of a testimonial section further fosters a sense of connection, allowing users to share their experiences and feedback. NewsTok's design thinking approach is evident in its commitment to providing a seamless and enriching user experience, encouraging collaboration and participation in the dynamic world of news sharing. 
 
 #### TYPOGRAPHY
 
-The font families used are 
+The font families used are Roboto, Lato. It aims to strike a balance between playful and clear communication, contributing to a user-friendly interface that aligns with the website's goal of making it accessible to users of all ages.
  
 ### WIREFRAMES
 
@@ -32,7 +51,8 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 - **NAVIGATION**
 
   - The navigation is very simple and easy.
-  - 
+  - The content of the website is presented on the landing page making user's understand the purpose.
+  - The navigation bar
 
 - **LANDING PAGE**
 
