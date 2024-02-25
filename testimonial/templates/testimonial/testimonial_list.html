@@ -10,8 +10,9 @@
         <!-- News Entries Column -->
         <div class="col-12 mt-3 left">
             <div>
-                <a href="{% url 'new_testimonial' %}"><button type="button" class="btn btn-primary">NEW
-                        TESTIMONAIL</button></a>
+                <a href="/testimonial/new" class="btn-link">
+                    <button type="button" class="btn btn-primary">NEW TESTIMONIAL</button>
+                </a>
             </div>
             <div class="row">
                 {% for testimonial in object_list %}
