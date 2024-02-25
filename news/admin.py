@@ -3,15 +3,18 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Article, Comment
 
 
+# Register your models here.
 @admin.register(Article)
 class ArticleAdmin(SummernoteModelAdmin):
     """
-    Registers ArticleAdmin in admin for :model:`news.Article` and SummernoteModelAdmin
+    Registers ArticleAdmin in admin for :model:`news.Article`
+    and SummernoteModelAdmin
 
     **Context**
 
     ``list_display``
-        list diplay for title, status, created_on, category and approved fields.
+        list diplay for title, status, created_on,
+        category and approved fields.
     ``search_fields``
         search for title and content fields.
     ``list_filter``
@@ -27,13 +30,11 @@ class ArticleAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-# Register your models here.
-#admin.site.register(Comment)
-
 @admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
     """
-    Registers CommentAdmin in admin for :model:`news.Comment` and SummernoteModelAdmin
+    Registers CommentAdmin in admin for :model:`news.Comment`
+    and SummernoteModelAdmin
 
     **Context**
 

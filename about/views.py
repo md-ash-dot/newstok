@@ -8,7 +8,7 @@ from .forms import CollaborateForm
 
 def about_me(request):
     """
-    Renders the most recent information on the website author 
+    Renders the most recent information on the website author
     and allows user collaboration request
     Displays an individual instance of :model:`about.About`.
 
@@ -19,7 +19,7 @@ def about_me(request):
     ``collaborate_form``
         The instance of :form:`about.ColloborateForm`.
     **TEMPLATE**
-    
+
     :template:`about/about.html`
     """
     if request.method == "POST":
@@ -36,6 +36,6 @@ def about_me(request):
         "about/about.html",
         {
             "about": about,
-            "collaborate_form": collaborate_form
+            "collaborate_form": collaborate_form,
         },
     )

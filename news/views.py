@@ -27,6 +27,7 @@ class ArticleList(generic.ListView):
     template_name = "news/index.html"
     paginate_by = 6
 
+
 class ArticleListByGeneral(generic.ListView):
     """
     Displays General Articles in a List View.
@@ -44,6 +45,7 @@ class ArticleListByGeneral(generic.ListView):
     queryset = Article.objects.filter(status=1).filter(category=0)
     template_name = "news/index.html"
     paginate_by = 6
+
 
 class ArticleListByTechnology(generic.ListView):
     """
@@ -63,6 +65,7 @@ class ArticleListByTechnology(generic.ListView):
     template_name = "news/index.html"
     paginate_by = 6
 
+
 class ArticleListByBusiness(generic.ListView):
     """
     Displays Business Articles in a List View.
@@ -81,6 +84,7 @@ class ArticleListByBusiness(generic.ListView):
     template_name = "news/index.html"
     paginate_by = 6
 
+
 class ArticleListByScience(generic.ListView):
     """
     Displays Science Articles in a List View.
@@ -98,6 +102,7 @@ class ArticleListByScience(generic.ListView):
     queryset = Article.objects.filter(status=1).filter(category=3)
     template_name = "news/index.html"
     paginate_by = 6
+
 
 def article_detail(request, slug):
     """
@@ -160,7 +165,7 @@ def upvote_article(request, slug):
         An instance of :model:`news.Article`.
     """
     article = get_object_or_404(Article, slug=slug)
-    
+
     if request.user in article.upvoted_users.all():
         """ If the user has already upvoted, remove the upvote """
         article.upvotes -= 1
@@ -173,9 +178,10 @@ def upvote_article(request, slug):
         if request.user in article.downvoted_users.all():
             article.downvotes -= 1
             article.downvoted_users.remove(request.user)
-        
+
     article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
 
 def downvote_article(request, slug):
     """
@@ -258,8 +264,8 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER','/'))
-    
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
 
 def new_article(request):
     """
@@ -283,13 +289,13 @@ def new_article(request):
             article.slug = slugify(article.title)
             article.author = request.user
             article.save()
-            
+
     article_form = ArticleForm()
 
     return render(
         request,
         "news/new_article.html",
-        {   
+        {
             "new_article": new_article,
             "article_form": article_form
         },

@@ -7,7 +7,8 @@ from .models import Testimonial
 @admin.register(Testimonial)
 class TestimonialAdmin(SummernoteModelAdmin):
     """
-    Registers TestimonialAdmin in admin for :model:`testimonial.Testimonial` and SummernoteModelAdmin
+    Registers TestimonialAdmin in admin for
+    :model:`testimonial.Testimonial` and SummernoteModelAdmin
 
     **Context**
 
@@ -25,7 +26,3 @@ class TestimonialAdmin(SummernoteModelAdmin):
     search_fields = ['name', 'email']
     list_filter = ('status', 'created_on',)
     summernote_fields = ('testimonial',)
-
-    
-
-

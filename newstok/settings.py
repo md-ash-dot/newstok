@@ -26,14 +26,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-4@5#7efsnxsy*fn_rljy82tkuz97&w$(cgsfz=_27rk-roxpg)'
+# SECRET_KEY = 'django-insecure-4@5#7efsnxsy*fn_rljy82tkuz97&w$(cgsfz=_27rk-roxpg)'
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-mdashdot-newstok-c5eklmly9kt.ws-eu108.gitpod.io',
-                '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-mdashdot-newstok-c5eklmly9kt.ws-eu108.gitpod.io', '.herokuapp.com']
 
 
 # Application definition
@@ -101,14 +100,6 @@ WSGI_APPLICATION = 'newstok.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
@@ -152,8 +143,8 @@ USE_I18N = True
 USE_TZ = True
 
 MESSAGE_TAGS = {
-messages.SUCCESS: 'alert-sucess',
-messages.ERROR: 'alert-danger',
+    messages.SUCCESS: 'alert-sucess',
+    messages.ERROR: 'alert-danger',
 }
 
 

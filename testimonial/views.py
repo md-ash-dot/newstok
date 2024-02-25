@@ -4,11 +4,11 @@ from django.views import generic
 from .models import Testimonial
 from .forms import TestimonialForm
 
-# Create your views here.
 
+# Create your views here.
 class TestimonialList(generic.ListView):
     """
-    Displays Testimonials in a List View from 
+    Displays Testimonials in a List View from
     :model:`testimonial.Testimonial`.
     `
     **Context**
@@ -21,6 +21,7 @@ class TestimonialList(generic.ListView):
     """
     queryset = Testimonial.objects.filter(status=1)
     template_name = "testimonial_list.html"
+
 
 def testimonial(request):
     """
@@ -43,7 +44,7 @@ def testimonial(request):
             return redirect("testimonial")
     else:
         testimonial_form = TestimonialForm()
-    
+
     return render(
         request,
         "testimonial/new_testimonial.html",

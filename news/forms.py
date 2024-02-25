@@ -10,6 +10,7 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+
 class ArticleForm(forms.ModelForm):
     """
     Form for :model:`news.Article`

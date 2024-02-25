@@ -9,13 +9,14 @@ from news.forms import CommentForm
 # Create your views here.
 class ArticleList(generic.ListView):
     """
-    Displays User profile Articles in a List View from 
+    Displays User profile Articles in a List View from
     :model:`news.Article`.
-    
+
     **Context**
 
     ``queryset``
-        Two filters of Article with satus 1 published and author logged in user.
+        Two filters of Article with satus 1 published
+        and author logged in user.
     ``paginate_by``
         Pagination by a value of 6.
     **TEMPLATE**
@@ -24,12 +25,14 @@ class ArticleList(generic.ListView):
     """
     template_name = "user_profile/user_profile_posts.html"
     paginate_by = 6
+
     def get_queryset(self):
         return Article.objects.filter(status=1).filter(author=self.request.user)
 
+
 class CommentList(generic.ListView):
     """
-    Displays User profile Comments in a List View from 
+    Displays User profile Comments in a List View from
     :model:`news.Comment`.
 
     **Context**
@@ -44,11 +47,6 @@ class CommentList(generic.ListView):
     """
     template_name = "user_profile/user_profile_comments.html"
     paginate_by = 6
+
     def get_queryset(self):
         return Comment.objects.filter(author=self.request.user)
-
-
-
-
-
-

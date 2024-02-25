@@ -14,5 +14,5 @@ urlpatterns = [
      path('category/general', views.ArticleListByGeneral.as_view(), name='general'),
      path('category/business', views.ArticleListByBusiness.as_view(), name='business'),
      path('category/technology', views.ArticleListByTechnology.as_view(), name='technology'),
-     path('category/science', views.ArticleListByScience.as_view(), name='science'), 
+     path('category/science', views.ArticleListByScience.as_view(), name='science'),
 ]
