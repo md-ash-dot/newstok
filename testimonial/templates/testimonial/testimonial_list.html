@@ -22,7 +22,7 @@
                                     <h2 class="card-title text-center">{{testimonial.name}}</h2>
                                 </li>
                                 <li class="list-group-item">
-                                    <p class="card-text">{{testimonial.testimonial}}</p>
+                                    <article class="card-text">{{testimonial.testimonial | safe}}</article>
                                 </li>
                                 <li class="list-group-item">
                                     <p class="card-text">{{testimonial.rating}} STARS</p>
