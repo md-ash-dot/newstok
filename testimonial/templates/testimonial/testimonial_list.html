@@ -9,10 +9,8 @@
     <div class="row">
         <!-- News Entries Column -->
         <div class="col-12 mt-3 left">
-            <div>
-                <a href="/testimonial/new" class="btn-link">
-                    <button type="button" class="btn btn-primary">NEW TESTIMONIAL</button>
-                </a>
+            <div class="btn-link" onclick="location.href='/testimonial/new';">
+                <button type="button" class="btn btn-primary">NEW TESTIMONIAL</button>
             </div>
             <div class="row">
                 {% for testimonial in object_list %}
