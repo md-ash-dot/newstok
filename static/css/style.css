@@ -89,6 +89,10 @@ body {
     z-index: 100;
 }
 
+.profile-image{
+    width: 75%;
+}
+
 .article-link {
     text-decoration: none;
     color: #445261;
