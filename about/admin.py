@@ -6,10 +6,26 @@ from .models import About, CollaborateRequest
 
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
+    """
+    Registers About in admin for :model:`about.About` and SummernoteModelAdmin
+
+    **Context**
+
+    ``summernote_fields``
+        SummernoteModelAdmin for content.
+    """
 
     summernote_fields = ('content',)
 
 @admin.register(CollaborateRequest)
 class CollaborateRequestAdmin(admin.ModelAdmin):
+    """
+    Registers CollaborateRequest in admin for :model:`about.CollaborateRequest`
+
+    **Context**
+
+    ``list_display``
+        list diplay for message and read fields.
+    """
 
     list_display = ('message', 'read',)
