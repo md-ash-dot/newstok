@@ -1,83 +1,81 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
 <div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Article title goes in these h1 tags -->
-                <h1 class="article-title">{{ article.title }}</h1>
-                <!-- Article author goes before the | the article's created date goes after -->
-                <p class="article-subtitle">{{ article.author }} | {{ article.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-              {% if "placeholder" in article.featured_image.url %}
-              <img src="{% static 'images/default.jpg' %}" class="scale"
-                alt="placeholder image">
-              {% else %}
-              <img src="{{ article.featured_image.url }}" class="scale"
-                alt="{{ article.title }}">
-              {% endif %}
-            </div>
-        </div>
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-md-6 masthead-text">
+        <!-- Article title goes in these h1 tags -->
+        <h1 class="article-title">{{ article.title }}</h1>
+        <!-- Article author goes before the | the article's created date goes after -->
+        <p class="article-subtitle">{{ article.author }} | {{ article.created_on }}</p>
+      </div>
+      <div class="d-none d-md-block col-md-6 masthead-image">
+        {% if "placeholder" in article.featured_image.url %}
+        <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">
+        {% else %}
+        <img src="{{ article.featured_image.url }}" class="scale" alt="{{ article.title }}">
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The article content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
-                    {{ article.content | safe }}
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- Displaying upvote and downvote buttons and score counter -->
-    <div>   
-      {% if user.is_authenticated %}
-      <h3>Vote:</h3>
-      <p>Logged in as: {{ user.username }}</p>
-      <form method="post" action="{% url 'upvote_article' article.slug %}">
-          {% csrf_token %}
-          <button type="submit" class="btn btn-primary btn-sm">UP-VOTE</button>
-      </form>
-      <div class="score">
-        <p>Score: {{ article.score }}</p>
+  <div class="row">
+    <div class="col card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <!-- The article content goes inside the card-text. -->
+        <!-- Use the | safe filter inside the template tags -->
+        <p class="card-text">
+          {{ article.content | safe }}
+        </p>
       </div>
-      <form method="post" action="{% url 'downvote_article' article.slug %}">
-          {% csrf_token %}
-          <button type="submit" class="btn btn-primary btn-sm vote">DOWN-VOTE</button>
-      </form>
-      {% else %}
-      <p>Log in to vote</p>
-      {% endif %}
     </div>
+  </div>
+  <!-- Displaying upvote and downvote buttons and score counter -->
+  <div>
+    {% if user.is_authenticated %}
+    <h3>Vote:</h3>
+    <p>Logged in as: {{ user.username }}</p>
+    <form method="post" action="{% url 'upvote_article' article.slug %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary btn-sm">UP-VOTE</button>
+    </form>
+    <div class="score">
+      <p>Score: {{ article.score }}</p>
+    </div>
+    <form method="post" action="{% url 'downvote_article' article.slug %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary btn-sm vote">DOWN-VOTE</button>
+    </form>
+    {% else %}
+    <p>Log in to vote</p>
+    {% endif %}
+  </div>
 
 
-    <!-- Displaying share button to copy link to clipboard -->
-    <div class="row">
-      <div class="col-12">
-        <button type="button" class="btn btn-outline-success" onclick="geturl()">SHARE</button>
-        <script>function geturl(){
+  <!-- Displaying share button to copy link to clipboard -->
+  <div class="row">
+    <div class="col-12">
+      <button type="button" class="btn btn-outline-success" onclick="geturl()">SHARE</button>
+      <script>function geturl() {
           const currentUrl = window.location.href;
           navigator.clipboard.writeText(currentUrl);
           document.getElementById("share-button-clicked").classList.remove('d-none');
           document.getElementById("share-button-message").classList.add('d-none');
         }</script>
-        <div id="share-button-clicked" class="alert alert-primary d-none" role="alert">
-          Link to this article copied to clipboard and ready to SHARE!
-        </div>
-        <div class="alert alert-primary" id="share-button-message">
-          Click SHARE to copy article link to clipboard.
-        </div>
+      <div id="share-button-clicked" class="alert alert-primary d-none" role="alert">
+        Link to this article copied to clipboard and ready to SHARE!
+      </div>
+      <div class="alert alert-primary" id="share-button-message">
+        Click SHARE to copy article link to clipboard.
       </div>
     </div>
-    <!-- Displaying count of comments -->
+  </div>
+  <!-- Displaying count of comments -->
   <div class="row">
     <div class="col-12">
       <strong class="text-secondary">
@@ -122,43 +120,37 @@
     </div>
     <!-- Creating New Comments -->
     <div class="col-md-4 card mb-4 mt-3">
-        <div class="card-body">
-          {% if user.is_authenticated %}
-          <h3>Leave a comment:</h3>
-          <p>Posting as: {{ user.username }}</p>
-          <form id="commentForm" method="post"
-            style="margin-top: 1.3em;">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit"
-              class="btn btn-signup btn-lg">Submit</button>
-          </form>
-          {% else %}
-          <p>Log in to leave a comment</p>
-          {% endif %}
-        </div>
+      <div class="card-body">
+        {% if user.is_authenticated %}
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+          {{ comment_form | crispy }}
+          {% csrf_token %}
+          <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p>Log in to leave a comment</p>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete your comment?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
       </div>

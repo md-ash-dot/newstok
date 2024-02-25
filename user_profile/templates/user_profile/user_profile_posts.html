@@ -3,13 +3,11 @@
 {% block content %}
 
 
-
-
-<!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left">
-            <a href="{% url 'user_profile_comments' %}"><button type="button" class="btn btn-primary">GO TO YOUR COMMENTS</button></a>
+            <a href="{% url 'user_profile_comments' %}"><button type="button" class="btn btn-primary">GO TO YOUR
+                    COMMENTS</button></a>
         </div>
         <!-- News Entries Column -->
         <div class="col-12 mt-3 left">
@@ -34,7 +32,8 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
                                     <a href="../{{ article.slug }}" class="article-link">
-                                    <h2 class="card-title text-center">{{ article.title }}</h2></a>
+                                        <h2 class="card-title text-center">{{ article.title }}</h2>
+                                    </a>
                                 </li>
                                 <li class="list-group-item">
                                     <p class="card-text text-muted h6">{{ article.created_on }}</p>
@@ -59,10 +58,9 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-        <li>
-            <a href="?page={{ page_obj.previous_page_number }}"
-            class="page-link">&laquo; PREV</a>
-        </li>
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+            </li>
             {% endif %}
             <span class="page-link">
                 Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
@@ -75,33 +73,4 @@
     {% endif %}
 </div>
 
-<!-- index.html content ends here -->
 {% endblock %}
-
-<!-- <div class="container mt-5">
-    <div class="row">
-        <div class="col-4 text-center">
-            <img src="{% static 'images/nobody.jpg' %}" width="75%">
-        </div>
-        <div class="col-8">
-            <!-- Title goes between these h2 tags -->
-            <h2></h2>
-            <!-- Content goes directly underneath this -->
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-right">
-            <!-- Updated on field goes in here -->
-            <p class="text-end"><em>Updated on: </em></p>
-        </div>
-      </div>
-</div>
-
-<a href="../{{ article.slug }}" class="article-link">
-    <h2 class="card-title">{{ article.title }}</h2>
-    <p class="card-text">{{ article.excerpt }}</p>
-</a> 
-
-<hr />
-<p class="card-text text-muted h6">{{ article.created_on}}
-</p> -->
