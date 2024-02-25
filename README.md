@@ -51,33 +51,70 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 - **NAVIGATION**
 
   - The navigation is very simple and easy.
-  - The content of the website is presented on the landing page making user's understand the purpose.
-  - The navigation bar
-
-- **LANDING PAGE**
-
-  - The landing page displays the name of the website, which takes center stage.
-  - 
-  
-![Landing page](/)
+  - The content of the website is presented on the navigation bar making it very easy for users to navigate.
+  - The logo also acts as the home page button.
+  - The categories can be accessed from a drop down menu.
+  - The users can login or register by clicking on the buttons on the navigation bar.
+  - After logging in the Register and login buttons are hidden.
+  - Logged in users will be able to access the profile and submit new article buttons.
+  - The About and Testimonial buttons are displayed on the right side of the navigation bar.
+  - The footer holds the copyright information and links to all the social media pages.
 
 - **HOME PAGE**
 
-  - The 
+  - The landing page displays engaging headlines and visuals showcasing a selection articles, drawing visitors into the platform's content.
+  - A clear call-to-action encouraging users to register, sign up, or log in to access personalized features and contribute their own content.
+  - A dynamic and visually appealing news feed displaying the latest and trending articles, keeping the landing page fresh and current.
+  - The navigation bar makes it easy as for users to quickly make a decision on what they want to do on the website.
+  - The articles with it's pictures, titles and information like author, excerpt and created on dates, makes it easy for users to pick one and dive right in.
+  
+![Landing page](/)
 
 ![Game choice display area](/)
 
 - **DETAIL VIEW**
 
-  - The 
+  - The detail view of each article can be accessed by clicking on it. 
+  - The article's picture if uploaded or the default placeholder image is displayed on the top, making the page look more lively.
+  - The title, author and created on date are displayed alongside the article's image. Giving the user all the information they need before proceeding down to the article.
+  - The content is featured below the image. The article's content can be styled by the admin before publishing it.
+  - A message stating Log in to vote is displayed under the content, prompting users to login and vote.
+  - The Voting section can be found right below the article's content, so user's can share their view of the article at the click of a button
+  - Users can click on the up-vote or down-vote button and also see the vote's score.
+  - The logged in as with the user's name is displayed on the top the voting sction.
+  - A share button is displayed right underneath the voting section. Alongside a message prompting the user's to click on it to share the article.
+  - A message stating Link to this article copied to clipboard and ready to SHARE! is dispalyed if the button is clicked.
+  - A comment count is displayed on top of the comment's section, showing the total numbewr of comments on the article.
+  - Below which the approved comments are displayed, and a message prompting users to log in to comment.
+  - In the case of logged in users all their pending comments are also seen in this section.
+  - The user's comments also display a edit and delete button for each of their comments.
+  - The text area for a new comment is displayed for the logged in users right beside the comments.
 
 ![Computer score counter](/)
 ![Player score counter](/)
 
-- **ABOUT PAGE**
-  - The 
+- **Register PAGE**
+
+  - The register page diplays a mesasge to sign up or to log in if the user already holds an account, along with a link to sign in.
+  - The account registration form can be found right below to message.
+  - The registration form has username, email, password and password(again) fields.
+  - The information about passwords conditions can be found next to the password field.
+  - the users can click on the sign up button to submit the form and register.
+
+
+- **LOGIN PAGE**
+
+  - The login page displays a message, welcoming the user and to log in if they would like to comment or like an article or to sign up if they don't already have an account.
+  - The login form can be seen right below the message.
+  - The forms holds the username, password and remember me fields with a button to sign to the user's account.
   
 ![Game choice buttons](/)
+
+- **ABOUT PAGE**
+
+  - The login page displays a message, welcoming the user and to log in if they would like to comment or like an article or to sign up if they don't already have an account.
+  - The login form can be seen right below the message.
+  - The forms holds the username, password and remember me fields with a button to sign to the user's account.
 
 - **COLLABORATE FORM**
   - The 
