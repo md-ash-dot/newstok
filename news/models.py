@@ -7,6 +7,9 @@ CATEGORY = ((0, "General"), (1, "Technology"), (2, "Business"), (3, "Science"))
 
 # Create your models here.
 class Article(models.Model):
+    """
+    Stores a single article entry related to :model:`auth.User`.
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     category = models.IntegerField(choices=CATEGORY, default=0)
@@ -39,6 +42,10 @@ class Article(models.Model):
     
 
 class Comment(models.Model):
+    """
+    Stores a single comment entry related to :model:`auth.User`
+    and :model:`news.article`.
+    """
     article = models.ForeignKey(
         Article, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(

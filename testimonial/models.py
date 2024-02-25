@@ -5,6 +5,9 @@ STATUS = ((0, "Not Published"), (1, "Published"))
 
 # Create your models here.
 class Testimonial(models.Model):
+    """
+    Stores a single testimonial entry.
+    """
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length = 254)
     testimonial = models.TextField()
