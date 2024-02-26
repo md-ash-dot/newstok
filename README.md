@@ -107,6 +107,12 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The login page displays a message, welcoming the user and to log in if they would like to comment, vote, and submit a new article or to sign up if they don't already have an account.
   - The login form can be seen right below the message.
   - The forms holds the username, password and remember me fields with a button to sign to the user's account.
+
+- **LOGOUT PAGE**
+
+  - The logout page can be found on the navigation bar for logged in users.
+  - A warning message asking the user if they are sure they want to sign out is seen,
+  - They can proceed to click on sign out to logout of their account.
   
 ![Game choice buttons](/)
 
@@ -117,8 +123,18 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The let's collaborate form can be found right beneath it.
   - The collaborate form has name, email and message fields along a button to submit the collaboration request.
 
-- **COLLABORATE FORM**
-  - The 
+- **TESTIMONIAL PAGE**
+  - The testmonial page can be accessed by clicking on navigation button on the right.
+  - The users can see the testimonials in cards similar to the articles in the home page.
+  - The name, testimonial and star rating can be seen in each of the card in the testimonial page.
+  - A new testimonial button sits on the top of the page.
+
+- **NEW TESTIMONIAL PAGE**
+  - The new testmonial page can be accessed by clicking on the new testimonial button on the testimonial page.
+  - A message is displayed for the users inviting them to share their testimonial.
+  - A new testimonial form can be found below with name, email, testimonial and Rating fields.
+  - The users can fill the form out and use the submit button and send their testimonial to us.
+  
 
 ![Restart button](/)
 
