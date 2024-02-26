@@ -165,6 +165,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 
 ### EXISTING ADMIN FEATURES
 
+![Admin panel](/)
 - **ABOUT**
 
   - The about section in the admin panel can be used to access the about and collaboration requests content.
