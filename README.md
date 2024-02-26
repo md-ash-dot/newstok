@@ -1,7 +1,7 @@
 # NEWSTOK NEWS WEBSITE
 [NEWSTOK NEWS WEBSITE](https://github.com/md-ash-dot/newstok)
 
-ABOUT NEWSTOK
+NewsTok is a user-centric news-sharing platform designed with a thoughtful approach to address the diverse needs of its audience. The website's intuitive navigation ensures seamless exploration, allowing users to easily access articles, submit content, and engage in collaborative activities. With a clean and responsive design, NewsTok encourages active participation through features like voting, commenting, and testimonials. Admin capabilities include managing articles, comments, and testimonials via a user-friendly dashboard. The platform's commitment to a dynamic user experience is evident in its design thinking principles and use of technologies like Django, Bootstrap, and Cloudinary. NewsTok strives to create a vibrant community where users can not only consume news but actively contribute to the dialogue.
 
 ![Responsive mockup](/images_readme/responsive.png)
 
