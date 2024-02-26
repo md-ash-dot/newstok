@@ -262,14 +262,18 @@ The website uses a responsive design for users to enjoy it across devices. The w
 
 - CI Python Linter 
 
-  - No errors were returned when passing through the official [CI Python Linter](https://pep8ci.herokuapp.com/)
+  - No major errors were found except for E501 line too long ,when passing through the official [CI Python Linter](https://pep8ci.herokuapp.com/)
+  - Line too long errors were not corrected, due to time constraints and in fear of breaking the code.
 
 ![HTML Validator](/)
 
 - HTML
 
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
-
+  - No major errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
+  - In article detail views CSS: font-optical-sizing: Property font-optical-sizing doesn't exist was returned.
+  - In testomonials page CSS: white-space-collapse: Property white-space-collapse doesn't exist was returned.
+  - These were probably created from the richtext in the admin panel, and were not corrected, due to time constraints and in fear of breaking the code.
+  
 ![HTML Validator](/)
 
 - css
