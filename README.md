@@ -209,7 +209,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 - **MODELS ERD**
   - ERDs Entity relationship diagrams were used to plan each model used in the project.
   - These ERDs helped in understanding the model and relationships better from the start, making it easier to plan ahead.
-![Models ERD]()
+![Models ERD](/images_readme/NewsTok%20ERD.jpeg)
 
 ### TECHNOLOGIES USED
 - DJANGO 
@@ -273,7 +273,7 @@ The website uses a responsive design for users to enjoy it across devices. The w
   - In article detail views CSS: font-optical-sizing: Property font-optical-sizing doesn't exist was returned.
   - In testomonials page CSS: white-space-collapse: Property white-space-collapse doesn't exist was returned.
   - These were probably created from the richtext in the admin panel, and were not corrected, due to time constraints and in fear of breaking the code.
-  
+
 ![HTML Validator](/)
 
 - css
@@ -323,7 +323,12 @@ The website uses a responsive design for users to enjoy it across devices. The w
 
 - CommandError: 'profile' conflicts with the name of an existing Python module and cannot be used as an app name. Please try another name.
 
-  - name profile couldn't be used to create the app so user_profile was used instead.
+  - Fix: name profile couldn't be used to create the app so user_profile was used instead.
+
+- content submitted on the admin panel and displayed on the front end displayed in html format wit p tags etc.
+  
+  - Fix: {% autoescape off %} {% endautoescape %} was used.
+
 
 ## DEPLOYMENT
 
