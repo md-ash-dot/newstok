@@ -46,7 +46,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
  
 ## FEATURES
 
-### EXISTING FEATURES
+### EXISTING USER FEATURES
 
 - **NAVIGATION**
 
@@ -163,6 +163,29 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - By clicking on the icons, the user is taken to the respective social media site in a new tab on the browser.
 ![Footer](/)
 
+### EXISTING ADMIN FEATURES
+
+- **ABOUT**
+
+  - The about section in the admin panel can be used to access the about and collaboration requests content.
+  - The about page content can be updated using the title, image and content fields. The content can also be styled.
+  - Colloboration requests can be reviewed and marked as read.
+  
+
+- **NEWS**
+
+  - The news section in the admin panel can be used to access the articles and comments content, posted by the admin and users.
+  - The article content can be updated using the title, slug, category, author, image and content, status, excerpt and approved fields. The content can also be styled.
+  - User's comments can be reviewed and marked as approved.
+  - For the articles there is a search field, and filters such as by status, approved and created on.
+  - For the comments there is a search field, and filters such as by approved and created on.
+
+- **TESTIMONIAL**
+
+  - The testimonial section in the admin panel can be used to access the testimonials content, posted by the users.
+  - The testimonial content can be reviewed and marked as published to publish them. The content can also be styled.
+  - There is a search field, and filters such as by status and created on.
+
 
 ### FEATURES LEFT TO IMPLEMENT
 
@@ -178,6 +201,16 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 - An event calender displaying upcoming events to colloborate on topics in person. Booking system to reserve a seat for the event.
 - Display maps using api to show event locations.
 
+### MVT
+ 
+- **MODEL VIEW TEMPLATE**
+ - Models, views and templates have been used to design this django project.
+
+- **MODELS ERD**
+  - ERDs Entity relationship diagrams were used to plan each model used in the project.
+  - These ERDs helped in understanding the model and relationships better from the start, making it easier to plan ahead.
+![Models ERD]()
+
 ### TECHNOLOGIES USED
 - DJANGO 
 - BOOTSTRAP
@@ -187,6 +220,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 - JAVASCRIPT
 - PYTHON 
 - CLOUDINARY
+- DJANGO ALLAUTH
 - ELEPHANTSQL - PostgreSQL
 - HEROKU 
 
@@ -300,7 +334,7 @@ The live link to deployed website can be found here - [NEWSTOK]()
 ### CODE
 
 - The Bootstrap Resume project, I Think Therefore I Blog codestar project done by Code Institute has been the code that was used to learn how to build this website.
-- The codestar project code has been used as the base and reference to building the NewsTok project. - [codestar] (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+2023_Q3/courseware/56a2da0940b4411d8a38c2b093a22c60/4565659a34d648b8b8edd063c3182180/)
+- The codestar project code has been used as the base and reference to building the NewsTok project. - [codestar](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+2023_Q3/courseware/56a2da0940b4411d8a38c2b093a22c60/4565659a34d648b8b8edd063c3182180/)
 - bootstrap documention was used for bootstrap research and references. [bootstrap docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 - django documention was used for django research and references. [django docs](https://docs.djangoproject.com/en/5.0/)
 - w3schools was used for general code concept searches. [w3schools](https://www.w3schools.com/)
