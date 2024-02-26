@@ -72,7 +72,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 
 ![Game choice display area](/)
 
-- **DETAIL VIEW**
+- **DETAIL ARTICLE VIEW**
 
   - The detail view of each article can be accessed by clicking on it. 
   - The article's picture if uploaded or the default placeholder image is displayed on the top, making the page look more lively.
@@ -115,6 +115,25 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - They can proceed to click on sign out to logout of their account.
   
 ![Game choice buttons](/)
+  
+
+![Restart button](/)
+
+- **PROFILE PAGE**
+  - The profile page can be accessed by clicking on the profile button by logged in users on the navigation bar.
+  - On clicking they are taken to a page which displays a message my posts, below which all the article posts of the logged in user are displayed, in a similar manner to the home page.
+  - The users can find a go to your comments button on the top of the page.
+  - On clicking on the go to your comments button, they are taken to page with a message saying my comments, and also a go to your posts button on the top of the page, if they wish to go back to their posts.
+  - The users comments are displayed along with the title of the article to which the particular comment belongs to, the unapproved comments are greyed out like in the article detail view.
+  - The users can click on edit or the title to take them to the artcile and edit their comments.
+  - They can delete their comment by clicking on the delete button, and reading and accepting the warning message that pops up.
+
+
+- **NEW ARTICLE PAGE**
+  - The new article page can be accessed by clicking on the submit new article page button on the navigation bar.
+  - The new article pages displays a message welcoming the user, below which the guidelines and submission process are explained in a few simple points.
+  - The user can then proceed to fill out the new article form with the title, category and content fields provided.
+  - The filled out form can be submitted using the submit button after filling out the new article form.
 
 - **ABOUT PAGE**
 
@@ -134,12 +153,11 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - A message is displayed for the users inviting them to share their testimonial.
   - A new testimonial form can be found below with name, email, testimonial and Rating fields.
   - The users can fill the form out and use the submit button and send their testimonial to us.
-  
 
-![Restart button](/)
+- **THE FOOTER**
+  - The footer displays the copyright message, along with a follow us message with all the social media icons.
+  - By clicking on the icons, the user is taken to the respective social media site in a new tab on the browser.
 
-- **NEW ARTICLE**
-  - A
 
 ![Computer wins message](/)
 ![Player wins message](/)
