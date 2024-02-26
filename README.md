@@ -221,6 +221,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 - DJANGO 
 - BOOTSTRAP
 - MVT - MODEL VIEW TEMPLATE
+- Front end CRUD (Create Read Update Delete)
 - HTML
 - CSS
 - JAVASCRIPT
