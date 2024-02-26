@@ -97,7 +97,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The registration form has username, email, password and password(again) fields.
   - The information about passwords conditions can be found next to the password field.
   - the users can click on the sign up button to submit the form and register.
-![Register page](/)
+  ![Register page](/)
 
 - **LOGIN PAGE**
 
@@ -245,11 +245,18 @@ The website uses a responsive design for users to enjoy it across devices. The w
 - This website has been tested to check if it works on different browsers such as Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, and Samsung Internet.
 - The website has been tested using the dev tools device toolbar on the browser to check if it functions and looks good on all standard screen sizes, showing it uses a responsive design.
 - All text on the website has been checked to see if it is readable and easy to understand.
-- All the game choice buttons on the website, used to play the game have been tested and is in good working order.
-- The restart button in the website has been tested to see if it resets the score, the player, and computer images, clears the winner message, and repopulates the game choice buttons.
-- The score counter has been tested to see if it is incrementing properly on each victory.
-- The score counter has been tested to see if scores are not incremented in the event of a draw.
-- The game has been tested to see if the player and computer have random chances of winning.
+- All buttons on the website, used to navigate and operate the website have been tested and is in good working order.
+- New article have been posted, styled to check if it is displayed.
+- New comments have been posted, approved to check if it is displayed.
+- Categories section has been tested to see if they filter artcles to display. All categories tested.
+- Register, login, logout functions has been tested.
+- The Profile page has been tested to see if logged in users see their articles posts and comments.
+- The about page has been checked to see if content and picture is updated. 
+- The testimonial page has been checked to see if it is updated after admin publishes a testimonial.
+- Colloboration request form has been submitted and tested.
+- Submit new article form has been submitted and tested.
+- New testimonial form has been submitted and tested.
+- All admin sections have been tested.
 
 ### VALIDATOR TESTING
 
