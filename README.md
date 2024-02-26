@@ -165,7 +165,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 
 ### EXISTING ADMIN FEATURES
 
-![Admin panel](/)
+![Admin panel](/images_readme/django-admin-panel.png)
 - **ABOUT**
 
   - The about section in the admin panel can be used to access the about and collaboration requests content.
@@ -266,8 +266,6 @@ The website uses a responsive design for users to enjoy it across devices. The w
   - No major errors were found except for E501 line too long ,when passing through the official [CI Python Linter](https://pep8ci.herokuapp.com/)
   - Line too long errors were not corrected, due to time constraints and in fear of breaking the code.
 
-![HTML Validator](/)
-
 - HTML
 
   - No major errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
@@ -275,13 +273,11 @@ The website uses a responsive design for users to enjoy it across devices. The w
   - In testomonials page CSS: white-space-collapse: Property white-space-collapse doesn't exist was returned.
   - These were probably created from the richtext in the admin panel, and were not corrected, due to time constraints and in fear of breaking the code.
 
-![HTML Validator](/)
-
 - css
 
   - No errors were found when passing through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
 
-![css Validator](/)
+![css Validator](/images_readme/css-validator.png)
 
 - JSHint
 
@@ -292,11 +288,11 @@ The website uses a responsive design for users to enjoy it across devices. The w
   - The colours and fonts used are easy to read and checked using lighthouse in dev tools for mobile and desktop.
   - Lighthouse desktop.
 
-![Accessibility score](/)
+![Accessibility score](/images_readme/lighthouse_desktop.png)
 
  - Lighthouse mobile.
 
-![Accessibility score](/)
+![Accessibility score](/images_readme/lighthouse-mobile.png)
 
 ## BUGS
 
@@ -344,7 +340,7 @@ The website uses a responsive design for users to enjoy it across devices. The w
   - In the new app’s resources tab, ensure you are using an eco dyno and delete any Postgres database Add-on.
   - Click Open app to open the webpage.
 
-The live link to deployed website can be found here - [NEWSTOK]()
+The live link to deployed website can be found here - [NEWSTOK](https://newstok-b91fa7faca2a.herokuapp.com/)
 
 ## CREDITS
 
