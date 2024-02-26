@@ -166,10 +166,17 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 
 ### FEATURES LEFT TO IMPLEMENT
 
-- Separate section displaying messages 
-- 
-- 
-
+- An image slideshow on the homepage using bootstrap carousel to show featured news articles.
+- A search field to the navigation bar to be able to search content, author etc.
+- Search fields inside the user profile posts and comments sections.
+- Image upload option to the new article form.
+- More categories for the news articles to be categorised in.
+- Sort articles on the homepage using a sort filter for users.
+- Add up-vote and down-vote button right under each article card in the home page, so articles can be sorted according to votes.
+- Add up-vote and down-vote function to comments.
+- Report button to report an article or comment to admin, add detail to report by selecting options or filling out a report form.
+- An event calender displaying upcoming events to colloborate on topics in person. Booking system to reserve a seat for the event.
+- Display maps using api to show event locations.
 
 ### TECHNOLOGIES USED
 - DJANGO 
