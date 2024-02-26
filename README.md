@@ -59,7 +59,8 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - Logged in users will be able to access the profile and submit new article buttons.
   - The About and Testimonial buttons are displayed on the right side of the navigation bar.
   - The footer holds the copyright information and links to all the social media pages.
-![Navigation bar](/)
+![Navigation bar](/images_readme/nav-desktop.png)
+![Navigation bar mobile](/images_readme/nav-mobile.png)
 
 - **HOME PAGE**
 
@@ -68,7 +69,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - A dynamic and visually appealing news feed displaying the latest and trending articles, keeping the landing page fresh and current.
   - The navigation bar makes it easy as for users to quickly make a decision on what they want to do on the website.
   - The articles with it's pictures, titles and information like author, excerpt and created on dates, makes it easy for users to pick one and dive right in.
-![Landing page](/)
+![Landing page](/images_readme/responsive-desktop.png)
 
 - **ARTICLE DETAIL VIEW**
 
@@ -87,7 +88,9 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - In the case of logged in users all their pending comments are also seen in this section.
   - The user's comments also display a edit and delete button for each of their comments.
   - The text area for a new comment is displayed for the logged in users right beside the comments.
-![Article detail view](/)
+![Article detail view](/images_readme/detail%20view.png)
+![Article detail view](/images_readme/vote.png)
+![Article detail view](/images_readme/comment.png)
 
 
 - **REGISTER PAGE**
@@ -97,21 +100,21 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The registration form has username, email, password and password(again) fields.
   - The information about passwords conditions can be found next to the password field.
   - the users can click on the sign up button to submit the form and register.
-  ![Register page](/)
+  ![Register page](/images_readme/register.png)
 
 - **LOGIN PAGE**
 
   - The login page displays a message, welcoming the user and to log in if they would like to comment, vote, and submit a new article or to sign up if they don't already have an account.
   - The login form can be seen right below the message.
   - The forms holds the username, password and remember me fields with a button to sign to the user's account.
-![Login page](/)
+![Login page](/images_readme/login.png)
 
 - **LOGOUT PAGE**
 
   - The logout page can be found on the navigation bar for logged in users.
   - A warning message asking the user if they are sure they want to sign out is seen,
   - They can proceed to click on sign out to logout of their account.
-![Logout page](/)
+![Logout page](/images_readme/logout.png)
 
 - **PROFILE PAGE**
 
@@ -122,8 +125,8 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The users comments are displayed along with the title of the article to which the particular comment belongs to, the unapproved comments are greyed out like in the article detail view.
   - The users can click on edit or the title to take them to the artcile and edit their comments.
   - They can delete their comment by clicking on the delete button, and reading and accepting the warning message that pops up.
-![My posts page](/)
-![My comments page](/)
+![My posts page](/images_readme/profile%20posts.png)
+![My comments page](/images_readme/profile%20comments.png)
 
 - **NEW ARTICLE PAGE**
 
@@ -131,7 +134,8 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The new article pages displays a message welcoming the user, below which the guidelines and submission process are explained in a few simple points.
   - The user can then proceed to fill out the new article form with the title, category and content fields provided.
   - The filled out form can be submitted using the submit button after filling out the new article form.
-![New artcle page](/)
+![New article guidelines](/images_readme/article%20guideline.png)
+![New article form](/images_readme/article%20form.png)
 
 - **ABOUT PAGE**
 
@@ -139,7 +143,8 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The About text can be found right next to the image, which speaks about the platform and the creator of the platform.
   - The let's collaborate form can be found right beneath it.
   - The collaborate form has name, email and message fields along a button to submit the collaboration request.
-![About page](/)
+![About page](/images_readme/about.png)
+![About form](/images_readme/about%20form.png)
 
 - **TESTIMONIALS PAGE**
 
@@ -147,7 +152,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The users can see the testimonials in cards similar to the articles in the home page.
   - The name, testimonial and star rating can be seen in each of the card in the testimonial page.
   - A new testimonial button sits on the top of the page.
-![Testimonials page](/)
+![Testimonials page](/images_readme/testimonials.png)
 
 - **NEW TESTIMONIAL PAGE**
 
@@ -155,13 +160,13 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - A message is displayed for the users inviting them to share their testimonial.
   - A new testimonial form can be found below with name, email, testimonial and Rating fields.
   - The users can fill the form out and use the submit button and send their testimonial to us.
-![New testimonial page](/)
+![New Testimonial form](/images_readme/testimonial%20form%20.png)
 
 - **THE FOOTER**
 
   - The footer displays the copyright message, along with a follow us message with all the social media icons.
   - By clicking on the icons, the user is taken to the respective social media site in a new tab on the browser.
-![Footer](/)
+![Footer](/images_readme/footer.png)
 
 ### EXISTING ADMIN FEATURES
 
@@ -231,15 +236,15 @@ The website uses a responsive design for users to enjoy it across devices. The w
 
 - DESKTOP (Macbook)
   
-![Responsive desktop](/)
+![Responsive desktop](/images_readme/lighthouse_desktop.png)
 
 - TABLET (iPad mini)
   
-![Responsive tablet](/)
+![Responsive tablet](/images_readme/responsive-tablet.png)
 
 - MOBILE (Galaxy S8+)
   
-![Responsive mobile](/)
+![Responsive mobile](/images_readme/responsive-mobile.png)
 
 ## TESTING
 
