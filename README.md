@@ -3,7 +3,7 @@
 
 ABOUT NEWSTOK
 
-![Responsive mockup](/)
+![Responsive mockup](/images_readme/responsive.png)
 
 ## USER EXPERIENCE
 
@@ -42,7 +42,7 @@ The font families used are Roboto, Lato. It aims to strike a balance between pla
 ### WIREFRAMES
 
 Wireframes were designed using Lucidcharts's online wireframe tool.
-![Wire frames](/)
+![Wire frames](/images_readme/wireframe.jpeg)
  
 ## FEATURES
 
