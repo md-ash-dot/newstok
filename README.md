@@ -199,6 +199,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 - A search field to the navigation bar to be able to search content, author etc.
 - Search fields inside the user profile posts and comments sections.
 - Image upload option to the new article form.
+- Option to save drafts as user for new articles.
 - More categories for the news articles to be categorised in.
 - Sort articles on the homepage using a sort filter for users.
 - Add up-vote and down-vote buttons right under each article card on the home page, so articles can be sorted according to votes.
