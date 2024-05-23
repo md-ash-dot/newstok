@@ -158,6 +158,11 @@ body {
     color: rgb(172, 175, 175);
 }
 
+.awaiting-approval {
+    opacity: 0.5;
+    /* Additional styling for the faded effect */
+}
+
 .approval {
     color: rgb(222, 146, 168);
 }

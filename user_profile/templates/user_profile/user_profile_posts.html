@@ -29,9 +29,9 @@
                                     <p class="author">Author: {{ article.author }}</p>
                                 </div>
                             </div>
-                            <!-- {% if article.staus != 1 %}
-                            faded{% endif %} -->
-                            <ul class="list-group list-group-flush ">
+                            <ul class="list-group list-group-flush 
+                            {% if not article.approved and article.author == user %}
+                            awaiting-approval{% endif %}">
                                 <li class="list-group-item">
                                     <a href="../{{ article.slug }}" class="article-link">
                                         <h2 class="card-title text-center">{{ article.title }}</h2>
@@ -43,6 +43,11 @@
                                 <li class="list-group-item">
                                     <p class="card-text">{{ article.excerpt|truncatewords:35 }}</p>
                                 </li>
+                                {% if not article.approved and article.author == user %}
+                                <li class="list-group-item">
+                                    <p class="approval">This article is awaiting approval</p>
+                                </li>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>
