@@ -27,7 +27,7 @@ class ArticleList(generic.ListView):
     paginate_by = 6
 
     def get_queryset(self):
-        return Article.objects.filter(status=1).filter(author=self.request.user)
+        return Article.objects.filter(author=self.request.user)
 
 
 class CommentList(generic.ListView):
