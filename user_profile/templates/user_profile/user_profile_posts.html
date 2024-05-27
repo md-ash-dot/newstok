@@ -48,6 +48,10 @@
                                     <p class="approval">This article is awaiting approval</p>
                                 </li>
                                 {% endif %}
+                                {% if user.is_authenticated and article.author == user %}
+                                <a href="#"><button class="btn btn-delete" data-comment_id="{{ comment.id }}"
+                                    slug="{{ comment.article.slug }}">Delete</button></a>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>

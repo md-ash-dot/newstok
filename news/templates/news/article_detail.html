@@ -35,6 +35,12 @@
       </div>
     </div>
   </div>
+  <div>
+    {% if user.is_authenticated and article.author == user %}
+    <button class="btn btn-delete" data-article_id="{{ article.id }}">Delete</button>
+    <button class="btn btn-edit" data-article_id="{{ article.id }}">Edit</button>
+    {% endif %}
+  </div>
   <!-- Displaying upvote and downvote buttons and score counter -->
   <div>
     {% if user.is_authenticated %}
