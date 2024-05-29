@@ -267,9 +267,9 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
 
-def new_article(request):
+def new_article(request, slug=None):
     """
-    Display a form for submitting a new article to :model:`news.Article`.
+    Display a form for submitting a new article to :model:`news.Article` or editing an existing article.
 
     **Context**
 
@@ -282,15 +282,27 @@ def new_article(request):
 
     :template:`news/new_article.html`
     """
+    if slug:
+        article = get_object_or_404(Article, slug=slug)
+    else:
+        article = None
+
     if request.method == "POST":
-        article_form = ArticleForm(data=request.POST)
+        article_form = ArticleForm(data=request.POST, instance=article)
         if article_form.is_valid():
             article = article_form.save(commit=False)
             article.slug = slugify(article.title)
             article.author = request.user
-            article.save()
 
-    article_form = ArticleForm()
+            # Set approved to False when editing
+            if slug:
+                article.approved = False
+
+            article.save()
+            messages.success(request, 'Article submitted successfully' if not slug else 'Article updated successfully')
+            return HttpResponseRedirect(reverse('article_detail', args=[article.slug]))
+    else:
+        article_form = ArticleForm(instance=article)
 
     return render(
         request,

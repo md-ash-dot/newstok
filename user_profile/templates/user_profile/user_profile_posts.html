@@ -2,12 +2,10 @@
 {% load static %}
 {% block content %}
 
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left">
-            <a href="{% url 'user_profile_comments' %}"><button type="button" class="btn btn-primary">GO TO YOUR
-                    COMMENTS</button></a>
+            <a href="{% url 'user_profile_comments' %}"><button type="button" class="btn btn-primary">GO TO YOUR COMMENTS</button></a>
         </div>
         <!-- News Entries Column -->
         <div class="col-12 mt-3 left">
@@ -19,11 +17,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in article.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                    alt="placeholder image">
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src="{{ article.featured_image.url }}"
-                                    alt="{{ article.title }}">
+                                <img class="card-img-top" src="{{ article.featured_image.url }}" alt="{{ article.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ article.author }}</p>
@@ -49,8 +45,9 @@
                                 </li>
                                 {% endif %}
                                 {% if user.is_authenticated and article.author == user %}
-                                <li class="list-group-item">
+                                <li class="list-group-item d-flex justify-content-between">
                                     <button class="btn btn-delete" onclick="openDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete</button>
+                                    <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-primary">Edit</a>
                                 </li>
                                 {% endif %}
                             </ul>
