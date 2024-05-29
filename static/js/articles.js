@@ -1,11 +1,8 @@
-
-
-
-function openDeleteModal(slug, title) {
-    const deleteConfirm = document.getElementById('deleteConfirm');
-    deleteConfirm.href = `/article/delete/${slug}/`;
+function openArticleDeleteModal(slug, title) {
+    const articleDeleteConfirm = document.getElementById('articleDeleteConfirm');
+    articleDeleteConfirm.href = `/article/delete/${slug}/`;
     const modalTitle = document.getElementById('deleteModalLabel');
     modalTitle.textContent = `Delete article: "${title}"?`;
-    const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+    const deleteModal = new bootstrap.Modal(document.getElementById('articleDeleteModal'));
     deleteModal.show();
 }

@@ -8,9 +8,8 @@ urlpatterns = [
           views.comment_edit, name='comment_edit'),
      path('<slug:slug>/delete_comment/<int:comment_id>',
           views.comment_delete, name='comment_delete'),
-    path('article/new/', views.new_article, name='new_article'),
+     path('article/new/', views.new_article, name='new_article'),
      path('article/edit/<slug:slug>/', views.new_article, name='edit_article'),
-
      path('article/delete/<slug:slug>/', views.delete_article, name='delete_article'),
      path('<slug:slug>/upvote/', views.upvote_article, name='upvote_article'),
      path('<slug:slug>/downvote/', views.downvote_article, name='downvote_article'),

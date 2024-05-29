@@ -50,7 +50,7 @@
                                 {% endif %}
                                 {% if user.is_authenticated and article.author == user %}
                                 <li class="list-group-item d-flex justify-content-between">
-                                    <button class="btn btn-delete" onclick="openDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete</button>
+                                    <button class="btn btn-delete" onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete</button>
                                     <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-primary">Edit</a>
                                 </li>
                                 {% endif %}
@@ -87,7 +87,7 @@
     {% endif %}
 </div>
 
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="articleDeleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -100,7 +100,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+        <a id="articleDeleteConfirm" href="#" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
