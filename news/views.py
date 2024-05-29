@@ -300,3 +300,15 @@ def new_article(request):
             "article_form": article_form
         },
     )
+
+
+def delete_article(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+
+    if article.author == request.user and request.user.is_authenticated:
+        article.delete()
+        messages.add_message(request, messages.SUCCESS, 'Article deleted successfully!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You do not have permission to delete this article.')
+
+    return HttpResponseRedirect(reverse('user_profile_posts'))
