@@ -13,47 +13,80 @@
       <section>
         <h2>Before You Submit Your Article:</h2>
         <p>Dear NewsTok Contributor,</p>
-        <p>Thank you for choosing to contribute to NewsTok! We appreciate your dedication to sharing valuable insights
-          and stories with our community. Before you submit your article, please take a moment to review the guidelines
-          below:</p>
+        <p>
+          Thank you for choosing to contribute to NewsTok! We appreciate your
+          dedication to sharing valuable insights and stories with our
+          community. Before you submit your article, please take a moment to
+          review the guidelines below:
+        </p>
 
         <ol>
-          <li><strong>Originality Matters:</strong> Ensure that your article is original and has not been published
-            elsewhere. We value fresh perspectives and unique content.</li>
-          <li><strong>Accuracy is Key:</strong> Double-check facts, sources, and information to maintain the credibility
-            of your article. We strive to provide accurate and reliable news to our readers.</li>
-          <li><strong>Engage Your Audience:</strong> Craft your article in a way that captivates and informs our diverse
-            audience. Consider the interests and preferences of our readers.</li>
-          <li><strong>Quality Content:</strong> We prioritize well-written, well-researched, and engaging content.
-            Please proofread your article to ensure it meets our quality standards.</li>
-          <li><strong>Respectful Tone:</strong> Maintain a respectful and inclusive tone throughout your article. We
-            encourage constructive discussions and positive engagement.</li>
+          <li>
+            <strong>Originality Matters:</strong> Ensure that your article is
+            original and has not been published elsewhere. We value fresh
+            perspectives and unique content.
+          </li>
+          <li>
+            <strong>Accuracy is Key:</strong> Double-check facts, sources, and
+            information to maintain the credibility of your article. We strive
+            to provide accurate and reliable news to our readers.
+          </li>
+          <li>
+            <strong>Engage Your Audience:</strong> Craft your article in a way
+            that captivates and informs our diverse audience. Consider the
+            interests and preferences of our readers.
+          </li>
+          <li>
+            <strong>Quality Content:</strong> We prioritize well-written,
+            well-researched, and engaging content. Please proofread your article
+            to ensure it meets our quality standards.
+          </li>
+          <li>
+            <strong>Respectful Tone:</strong> Maintain a respectful and
+            inclusive tone throughout your article. We encourage constructive
+            discussions and positive engagement.
+          </li>
         </ol>
 
         <h3>Submission Process:</h3>
         <ol>
-          <li><strong>Fill in the Form:</strong> Complete the submission form with accurate details about yourself and
-            your article.</li>
-          <li><strong>Review & Approval:</strong> Our editorial team will review your submission. If necessary, we may
-            reach out for clarifications or edits.</li>
-          <li><strong>Publication:</strong> Once approved, your article will be scheduled for publication. Stay tuned
-            for updates!</li>
+          <li>
+            <strong>Fill in the Form:</strong> Complete the submission form with
+            accurate details about yourself and your article.
+          </li>
+          <li>
+            <strong>Review & Approval:</strong> Our editorial team will review
+            your submission. If necessary, we may reach out for clarifications
+            or edits.
+          </li>
+          <li>
+            <strong>Publication:</strong> Once approved, your article will be
+            scheduled for publication. Stay tuned for updates!
+          </li>
         </ol>
 
-        <p>Thank you for being a valuable contributor to NewsTok. We look forward to sharing your insights with our
-          global audience!</p>
+        <p>
+          Thank you for being a valuable contributor to NewsTok. We look forward
+          to sharing your insights with our global audience!
+        </p>
 
-        <p>Best regards,<br>NewsTok Editorial Team</p>
+        <p>Best regards,<br />NewsTok Editorial Team</p>
       </section>
     </div>
   </div>
   <div class="row justify-content-center">
     <div class="col-12 col-md-6 my-5">
+      <div>
+        {% if article_form.title.value == None %}
+        <h2>New Article Form</h2>
+        {% else %}
+        <h2>Update Article Form</h2>
+        {% endif %}
+      </div>
       <!-- add your form here. Your submit button should 
                               have the classes of btn, btn-secondary -->
       <form method="post">
-        {{ article_form | crispy }}
-        {% csrf_token %}
+        {{ article_form | crispy }} {% csrf_token %}
         <button class="btn btn-secondary" type="submit">Submit</button>
       </form>
     </div>
