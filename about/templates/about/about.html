@@ -3,16 +3,16 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-4 text-center">
+<div class="container-fluid mt-5">
+  <div class="row no-gutters">
+    <div class="col-12 col-md-4 text-center order-md-1 order-2">
       {% if "placeholder" in about.profile_image.url %}
-      <img src="{% static 'images/nobody.jpg' %}" class="profile-image" alt="placeholder image">
+      <img src="{% static 'images/nobody.jpg' %}" class="profile-image img-fluid mb-3" alt="placeholder image">
       {% else %}
-      <img src="{{ about.profile_image.url }}" class="profile-image" alt="{{ about.title }}">
+      <img src="{{ about.profile_image.url }}" class="profile-image img-fluid mb-3" alt="{{ about.title }}">
       {% endif %}
     </div>
-    <div class="col-8">
+    <div class="col-12 col-md-8 order-md-2 order-1">
       <!-- Title goes between these h2 tags -->
       <h2>{{ about.title }}</h2>
       <!-- Content goes directly underneath this -->
@@ -21,14 +21,13 @@
       </article>
     </div>
   </div>
-  <div class="row">
+  <div class="row no-gutters">
     <div class="col text-right">
       <!-- Updated on field goes in here -->
-
       <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
     </div>
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center no-gutters">
     <div class="col-12 col-md-6 my-5">
       <h2>Let's collaborate!</h2>
       <p>I believe in the power of shared knowledge and collective effort.
