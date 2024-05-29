@@ -266,6 +266,84 @@ The collaboration request form has been submitted and tested.
 A new testimonial form has been submitted and tested.
 - All admin sections have been tested.
 
+### GENERAL
+
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| Website works on different browsers such as Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, and Samsung Internet. | Tested the website on all mentioned browsers. | The website acted as normally and it worked on all browsers. | No fix needed. |
+| Website uses responsive design and functions well on all standard screen sizes. | Used the dev tools device toolbar on the browser to test on different screen sizes. | The website displayed and functioned correctly on all tested screen sizes. | No fix needed. |
+| All text on the website is readable and easy to understand. | Manually checked all text content on the website. | The text is readable and easy to understand. | No fix needed. |
+
+### HOME PAGE
+
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| **BUTTON** HOME and LOGO on click should load the default home page. | HOME and LOGO buttons clicked from other pages. | The home page loaded on click from all other pages. | No fix needed. |
+| Articles when published should be displayed in the home page. | Set article's status to published and draft. | Articles are displayed when it is published and are not displayed when status is set to draft. | No fix needed. |
+| Articles should display their image, category, title, date of posting and excerpt. | An article with all fields changed was published. | All articles displayed their image, category, title, date of posting and excerpt. | No fix needed. |
+| **BUTTON** NEXT and PREV on click should take you to the next and previous page. | NEXT and PREV buttons clicked to change the page. | The pages changed on click. | No fix needed. |
+| **BUTTON** NEXT and PREV should only appear when needed | Page with only one page of articles was published and more articles were added and visited the next and previous page. | The NEXT button only displayed when there more than one page. The PREV button only displayed when there was a previous page. | No fix needed. |
+| Pages should display the current page. | Articles added and changed the page. | The current page and total number of pages was displayed. | No fix needed. |
+|  |  |  | No fix needed. |
+
+### AUTHENTICATION
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| **BUTTON** REGISTER on click should load sign up page. | REGISTER button clicked. | REGISTER button on click loaded the sign up page. | No fix needed. |
+| **BUTTON** REGISTER and LOGIN buttons should be hidden after sign in. | Signed in and signed out as a user. | REGISTER and LOGIN buttons was hidden after sign in. | No fix needed. |
+| **BUTTON** LOGOUT, MY PROFILE, SUBMIT NEW ARTICLE buttons should appear only for logged in users. | Signed in and signed out as a user. | LOGOUT, MY PROFILE, SUBMIT NEW ARTICLE buttons appeared only for logged in users. | No fix needed. |
+| **BUTTON** LOGIN on click should load sign in page. | LOGIN button clicked. | LOGIN button on click loaded the sign up page. | No fix needed. |
+| **BUTTON** LOGOUT on click should load sign out page. | LOGOUT button clicked. | LOGOUT button on click loaded the sign out page. | No fix needed. |
+| **BUTTON** SIGNOUT on click should log user out and display message. | SIGNOUT button was clicked on signout page. | SIGNOUT button on click logged user out and displayed message "You have signed out." | No fix needed. |
+| **FORM** SIGN UP should take valid username, email, password and password again. The **BUTTON** SIGN UP should submit the form and register user. | All fields filled with valid and inavlid inputs and SIGN UP button clicked. | Form requested valid inputs and form was successfully sent and registered user. | No fix needed. |
+| **FORM** SIGN IN should take valid username , password and remember me checkbox. The **BUTTON** SIGN IN should submit the form and log in the user and display message. | Form requested valid inputs and form was successfully sent and logged in the user and displayed message. "Successfully signed in as "username" |  | No fix needed. |
+
+
+### PROFILE PAGE
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| **BUTTON** MY PROFILE on click should open the profile page. | MY PROFILE button clicked. | MY PROFILE button on click opened the profile page. | No fix needed. |
+| **BUTTON** GO TO YOUR COMMENTS on click should open user comments page. | GO TO YOUR COMMENTS button clicked. | GO TO YOUR COMMENTS button on click opened user comments page. | No fix needed. |
+| **BUTTON** GO TO YOUR POSTS on click should open user posts page. | GO TO YOUR POSTS button clicked. | GO TO YOUR POSTS button on click opened user posts page. | No fix needed. |
+| **BUTTON** DELETE and EDIT should be grayed out for unapproved articles and message should be displayed. | Added approved and unapproved articles. | DELETE and EDIT buttons grayed out for unapproved articles and message "This article is awaiting approval" displayed. | No fix needed. |
+
+### TESTIMONIALS PAGE
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+|  |  |  | No fix needed. |
+|  |  |  | No fix needed. |
+
+### NEW ARTICLE PAGE
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+|  |  |  | No fix needed. |
+|  |  |  | No fix needed. |
+
+### NEW ARTICLE PAGE
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+|  |  |  | No fix needed. |
+|  |  |  | No fix needed. |
+
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| All buttons used to navigate and operate the website are in good working order. | Clicked all buttons to ensure they perform their intended actions. | All buttons are working correctly. | No fix needed. |
+| New articles are displayed properly. | Posted new articles and checked their display. | Articles displayed correctly with the intended styling. | No fix needed. |
+| New comments are posted and approved properly. | Posted and approved new comments to check their display. | Comments are displayed correctly after approval. | No fix needed. |
+| Categories section filters articles correctly. | Tested each category to ensure articles are filtered and displayed correctly. | Categories filter articles correctly. | No fix needed. |
+| Register, login, and logout functions work correctly. | Tested the registration, login, and logout functionalities. | All functionalities worked correctly. | No fix needed. |
+|--------------|-------------|------------|---------|
+| Profile page shows logged-in users their articles, posts, and comments. | Logged in and checked the profile page for user-specific content. | Profile page displays the user's articles, posts, and comments correctly. | No fix needed. |
+| About page content and picture are updated. | Checked the About page for updated content and picture. | About page content and picture are updated correctly. | No fix needed. |
+| Testimonial page updates after admin publishes a testimonial. | Published a testimonial as admin and checked the testimonial page. | Testimonial page updates correctly with the new testimonial. | No fix needed. |
+| Collaboration request form submission works. | Submitted a collaboration request form. | Form submitted and response handled correctly. | No fix needed. |
+|--------------|-------------|------------|---------|
+| Submit new article form submission works. | Submitted a new article form. | Form submitted and article published correctly. | No fix needed. |
+| New testimonial form submission works. | Submitted a new testimonial form. | Form submitted and testimonial processed correctly. | No fix needed. |
+| All admin sections work correctly. | Tested all admin functionalities and sections. | All admin sections work correctly. | No fix needed. |
+
+
+
 ### VALIDATOR TESTING
 
 - CI Python Linter 
