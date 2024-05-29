@@ -147,6 +147,25 @@ body {
     background: #E84610;
 }
 
+.btn-delete-greyed-out,
+.btn-edit-greyed-out{
+    color: grey;
+    background-color: lightgrey;
+    border: 1px solid grey;
+  }
+
+.btn-delete-greyed-out:hover {
+color: white;
+background-color: #E84610;
+border-color: #E84610;
+}
+
+.btn-edit-greyed-out:hover {
+    color: white;
+    background-color: #188181;
+    border-color: #188181;
+  }
+
 .btn-like:hover,
 .btn-like:active {
     color: #E84610;
