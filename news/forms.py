@@ -1,6 +1,6 @@
 from .models import Comment, Article
 from django import forms
-
+from django_summernote.widgets import SummernoteWidget
 
 class CommentForm(forms.ModelForm):
     """
@@ -12,6 +12,7 @@ class CommentForm(forms.ModelForm):
 
 
 class ArticleForm(forms.ModelForm):
+    content = forms.CharField(widget=SummernoteWidget())
     """
     Form for :model:`news.Article`
     """
