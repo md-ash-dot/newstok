@@ -50,8 +50,8 @@
                                 {% endif %}
                                 {% if user.is_authenticated and article.author == user %}
                                 <li class="list-group-item d-flex justify-content-between">
-                                    <button class="btn btn-delete" onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete</button>
-                                    <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-primary">Edit</a>
+                                    <button class="btn btn-delete" onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')"><i class="fa-solid fa-trash"></i></button>
+                                    <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
                                 </li>
                                 {% endif %}
                             </ul>

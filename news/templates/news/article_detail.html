@@ -38,8 +38,8 @@
 
   <div>
     {% if user.is_authenticated and article.author == user %}
-    <button class="btn btn-delete" onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete</button>
-    <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-primary">Edit</a>
+    <button class="btn btn-delete" onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')"><i class="fa-solid fa-trash"></i></button>
+    <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>
     {% endif %}
   </div>
 
@@ -71,7 +71,7 @@
   <!-- Displaying share button to copy link to clipboard -->
   <div class="row">
     <div class="col-12">
-      <button type="button" class="btn btn-outline-success" onclick="geturl()">SHARE</button>
+      <button type="button" class="btn btn-outline-success" onclick="geturl()"><i class="fa-solid fa-share"></i>SHARE</button>
       <script>function geturl() {
           const currentUrl = window.location.href;
           navigator.clipboard.writeText(currentUrl);
@@ -122,9 +122,9 @@
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
           <button class="btn btn-delete {% if not comment.approved %}btn-delete-greyed-out{% endif %}" 
-          data-comment_id="{{ comment.id }}" slug="{{ comment.article.slug }}">Delete</button>
+          data-comment_id="{{ comment.id }}" slug="{{ comment.article.slug }}"><i class="fa-solid fa-trash"></i></button>
           <button class="btn btn-edit {% if not comment.approved %}btn-edit-greyed-out{% endif %}" 
-          data-comment_id="{{ comment.id }}">Edit</button>
+          data-comment_id="{{ comment.id }}"><i class="fa-solid fa-pen-to-square"></i></button>
           {% endif %}
         </div>
         {% endfor %}
