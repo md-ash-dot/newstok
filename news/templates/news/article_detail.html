@@ -53,14 +53,14 @@
     <p>Logged in as: {{ user.username }}</p>
     <form method="post" action="{% url 'upvote_article' article.slug %}">
       {% csrf_token %}
-      <button type="submit" class="btn btn-primary btn-sm">UP-VOTE</button>
+      <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up"></i></button>
     </form>
     <div class="score">
       <p>Score: {{ article.score }}</p>
     </div>
     <form method="post" action="{% url 'downvote_article' article.slug %}">
       {% csrf_token %}
-      <button type="submit" class="btn btn-primary btn-sm vote">DOWN-VOTE</button>
+      <button type="submit" class="btn btn-primary btn-sm vote"><i class="fa-solid fa-arrow-down"></i></button>
     </form>
     {% else %}
     <p>Log in to vote</p>
