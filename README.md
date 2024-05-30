@@ -305,25 +305,38 @@ A new testimonial form has been submitted and tested.
 | **BUTTON** MY PROFILE on click should open the profile page. | MY PROFILE button clicked. | MY PROFILE button on click opened the profile page. | No fix needed. |
 | **BUTTON** GO TO YOUR COMMENTS on click should open user comments page. | GO TO YOUR COMMENTS button clicked. | GO TO YOUR COMMENTS button on click opened user comments page. | No fix needed. |
 | **BUTTON** GO TO YOUR POSTS on click should open user posts page. | GO TO YOUR POSTS button clicked. | GO TO YOUR POSTS button on click opened user posts page. | No fix needed. |
-| **BUTTON** DELETE and EDIT should be grayed out for unapproved articles and message should be displayed. | Added approved and unapproved articles. | DELETE and EDIT buttons grayed out for unapproved articles and message "This article is awaiting approval" displayed. | No fix needed. |
+| **BUTTON** DELETE and EDIT should be grayed out for unapproved articles and comments. | Added approved and unapproved articles. | DELETE and EDIT buttons grayed out, changes colour with hover for unapproved articles and comments. | No fix needed. |
+| Unapproved articles and comments text should be grayed out and should display a message. | Added approved and unapproved articles. | Text grayed out for unapproved articles and comments and message "This article/comment is awaiting approval" displayed. | No fix needed. |
+| **BUTTON** DELETE under articles/comments on click should ask for confirmation to delete. | DELETE button clicked. | On click a modal was opened asking for confirmation with DELETE and CLOSE buttons | No fix needed. |
+| **BUTTON** DELETE and CLOSE in modal on click should close the modal or confirm deletion and display message. | DELETE and CLOSE buttons clicked. | CLOSE button on click closed modal. DELETE button on click deleted article/comment and displayed message "Article/Comment deleted. | No fix needed. |
+| **BUTTON** EDIT under articles/comments on click should open page for editing. | EDIT buttons clicked. | EDIT button on click opened pages for editing. | No fix needed. |
 
 ### TESTIMONIALS PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
-|  |  |  | No fix needed. |
+| **BUTTON** TESTIMONIALS on click should open Testimonial page. | TESTIMONIAL button clicked. | TESTIMONIAL button on click opened the testimonial page. | No fix needed. |
+| **BUTTON** NEW TESTIMONIAL on click should open new testimonial form. | NEW TESTIMONIAL button clicked. | NEW TESTIMONIAL button on cicked opned new testiminial form. | No fix needed. |
+| **FORM** NEW TESTIMONIAL should take valid name, email, testimonial and rating. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Your testimonial form has been submitted". | No fix needed. |
+| Testimonial page should display all approved testimonials with name, testimonial and ratings. | Add approved and unapproved testimonials. | Only approved testimonials with name, testimonial and ratings were displayed. | No fix needed. |
+
+### ABOUT PAGE
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| **BUTTON** ABOUT on click should open About page. | ABOUT button clicked. | ABOUT button on click opened the about page. | No fix needed. |
+| **FORM** COLLABORATE should take valid name, email, and message. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Collaboration request received! I endeavour to respond within 2 working days.". | No fix needed. |
+| About page should display a title, picture, updated on and content submitted by admin. | Upload picture, update title and content on Admin panel. | The about page displayed the title, picture, updated on and content submitted by admin. | No fix needed. |
 |  |  |  | No fix needed. |
 
 ### NEW ARTICLE PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
+| **BUTTON** SUBMIT NEW ARTICLE on click should open new article page. | SUBMIT NEW ARTICLE button clicked. | SUBMIT NEW ARTICLE button on click opened the new article page. | No fix needed. |
+| **FORM** ARTICLE should take valid title, category and content. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "". | No fix needed. |
 |  |  |  | No fix needed. |
 |  |  |  | No fix needed. |
 
-### NEW ARTICLE PAGE
-| **Expected** | **Testing** | **Result** | **Fix** |
-|--------------|-------------|------------|---------|
-|  |  |  | No fix needed. |
-|  |  |  | No fix needed. |
+
+
 
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
