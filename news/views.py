@@ -299,8 +299,9 @@ def new_article(request, slug=None):
                 article.approved = False
 
             article.save()
-            messages.success(request, 'Article submitted successfully' if not slug else 'Article updated successfully')
-            return HttpResponseRedirect(reverse('article_detail', args=[article.slug]))
+            messages.success(request, 'Article submitted successfully and is awaiting approval.' 
+            if not slug else 'Article updated successfully and is awaiting approval.')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
         article_form = ArticleForm(instance=article)
 

@@ -83,8 +83,7 @@
         <h2>Update Article Form</h2>
         {% endif %}
       </div>
-      <!-- add your form here. Your submit button should 
-                              have the classes of btn, btn-secondary -->
+      <!-- Article Form -->
       <form method="post">
         {{ article_form | crispy }} {% csrf_token %}
         <button class="btn btn-secondary" type="submit">Submit</button>
