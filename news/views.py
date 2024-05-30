@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from .models import Article, Comment
 from .forms import CommentForm, ArticleForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -243,7 +244,7 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('article_detail', args=[slug]))
 
-
+@login_required
 def comment_delete(request, slug, comment_id):
     """
     Delete an individual comment.
@@ -259,7 +260,7 @@ def comment_delete(request, slug, comment_id):
     article = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
-    if comment.author == request.user and request.user.is_authenticated:
+    if comment.author == request.user:
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
@@ -314,11 +315,11 @@ def new_article(request, slug=None):
         },
     )
 
-
+@login_required
 def delete_article(request, slug):
     article = get_object_or_404(Article, slug=slug)
 
-    if article.author == request.user and request.user.is_authenticated:
+    if article.author == request.user:
         article.delete()
         messages.add_message(request, messages.SUCCESS, 'Article deleted successfully!')
     else:
