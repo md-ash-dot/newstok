@@ -275,7 +275,6 @@ A new testimonial form has been submitted and tested.
 | All text on the website is readable and easy to understand. | Manually checked all text content on the website. | The text is readable and easy to understand. | No fix needed. |
 
 ### HOME PAGE
-
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | **BUTTON** HOME and LOGO on click should load the default home page. | HOME and LOGO buttons clicked from other pages. | The home page loaded on click from all other pages. | No fix needed. |
@@ -284,7 +283,14 @@ A new testimonial form has been submitted and tested.
 | **BUTTON** NEXT and PREV on click should take you to the next and previous page. | NEXT and PREV buttons clicked to change the page. | The pages changed on click. | No fix needed. |
 | **BUTTON** NEXT and PREV should only appear when needed | Page with only one page of articles was published and more articles were added and visited the next and previous page. | The NEXT button only displayed when there more than one page. The PREV button only displayed when there was a previous page. | No fix needed. |
 | Pages should display the current page. | Articles added and changed the page. | The current page and total number of pages was displayed. | No fix needed. |
-|  |  |  | No fix needed. |
+| **STATUS** LOGGED IN should be displayed on the top. | Logged in and out as user. | LOGGED IN status was displayed with message "You are not logged in"/"You are logged in as *username*" | No fix needed. |
+
+### CATEGORIES PAGES 
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| **BUTTON** CATEGORIES on click should display all categories. | CATEGORIES button clicked. | CATEGORIES button on click displayed a drop down menu with all categories. | No fix needed. |
+| **BUTTON** GENERAL, BUSINESS, SCIENCE, TECHNOLOGY on click should open page with respective articles. | GENERAL, BUSINESS, SCIENCE, TECHNOLOGY buttons clicked. | On click of all category list buttons respective articles displayed. | No fix needed. |
+
 
 ### AUTHENTICATION
 | **Expected** | **Testing** | **Result** | **Fix** |
@@ -297,6 +303,7 @@ A new testimonial form has been submitted and tested.
 | **BUTTON** SIGNOUT on click should log user out and display message. | SIGNOUT button was clicked on signout page. | SIGNOUT button on click logged user out and displayed message "You have signed out." | No fix needed. |
 | **FORM** SIGN UP should take valid username, email, password and password again. The **BUTTON** SIGN UP should submit the form and register user. | All fields filled with valid and inavlid inputs and SIGN UP button clicked. | Form requested valid inputs and form was successfully sent and registered user. | No fix needed. |
 | **FORM** SIGN IN should take valid username , password and remember me checkbox. The **BUTTON** SIGN IN should submit the form and log in the user and display message. | Form requested valid inputs and form was successfully sent and logged in the user and displayed message. "Successfully signed in as "username" |  | No fix needed. |
+| **LINK** SIGN IN and SIGN UP on the register and login page on click should open the respective pages. | SIGN IN and SIGN UP links clicked. | SIGN IN and SIGN UP links on click opened respective pages. | No fix needed. |
 
 
 ### PROFILE PAGE
@@ -308,8 +315,26 @@ A new testimonial form has been submitted and tested.
 | **BUTTON** DELETE and EDIT should be grayed out for unapproved articles and comments. | Added approved and unapproved articles. | DELETE and EDIT buttons grayed out, changes colour with hover for unapproved articles and comments. | No fix needed. |
 | Unapproved articles and comments text should be grayed out and should display a message. | Added approved and unapproved articles. | Text grayed out for unapproved articles and comments and message "This article/comment is awaiting approval" displayed. | No fix needed. |
 | **BUTTON** DELETE under articles/comments on click should ask for confirmation to delete. | DELETE button clicked. | On click a modal was opened asking for confirmation with DELETE and CLOSE buttons | No fix needed. |
-| **BUTTON** DELETE and CLOSE in modal on click should close the modal or confirm deletion and display message. | DELETE and CLOSE buttons clicked. | CLOSE button on click closed modal. DELETE button on click deleted article/comment and displayed message "Article/Comment deleted. | No fix needed. |
+| **BUTTON** DELETE and CLOSE in modal on click should close the modal or confirm deletion and display message. | DELETE and CLOSE buttons clicked. | CLOSE button on click closed modal. DELETE button on click deleted article/comment and displayed message "Article/Comment deleted". | No fix needed. |
 | **BUTTON** EDIT under articles/comments on click should open page for editing. | EDIT buttons clicked. | EDIT button on click opened pages for editing. | No fix needed. |
+
+
+### ARTICLE DETAIL PAGE
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| **BUTTON** ARTCLE TITLE in the home and my posts page on click should open respective articles. | ARTCLE TITLE buttons clicked on home and my posts page. |  ARTCLE TITLE buttons on click opened respective article detail pages. | No fix needed. |
+| **STATUS** LOGGED IN should be displayed under the article content to vote. | Logged in and out as user. | LOGGED IN status was displayed with message "Log in to vote"/"VOTE: Logged in as *username*" | No fix needed. |
+| **BUTTON** UPVOTE and DOWNVOTE on click should register a vote or remove a vote. | UPVOTE and DOWNVOTE buttons clicked. | UPVOTE and DOWNVOTE buttons registered and removed vote. | No fix needed. |
+| **COUNTER** SCORE should change number in a incremeents of each vote. | Upvoted and downvoted. | SCORE counter changed number in a incremeents of each vote and displayed the score. | No fix needed. |
+| **BUTTON** SHARE on click should copy link to the current article and display message. | SHARE button clicked. | SHARE button on click copied current page link to clipboard and changed message "Click SHARE to copy article link to clipboard." to "Link to this article copied to clipboard and ready to SHARE!" | No fix needed. |
+| **COUNTER** COMMENTS should display number of approved comments. | Added comments with status approved and not approved. | COMMENTS counter displayed the number of approved comments. | No fix needed. |
+| **BUTTON** DELETE under comments on click should ask for confirmation to delete. | DELETE button clicked. | On click a modal was opened asking for confirmation with DELETE and CLOSE buttons | No fix needed. |
+| **BUTTON** DELETE and CLOSE in modal on click should close the modal or confirm deletion and display message. | DELETE and CLOSE buttons clicked. | CLOSE button on click closed modal. DELETE button on click deleted comment and displayed message "Comment deleted". | No fix needed. |
+| **BUTTON** EDIT under comments on click should pre-populate the comment form body for editing and change button text to update. | EDIT buttons clicked. | EDIT button on click pre-populated the comment form body for editing and change button text from submit to update. | No fix needed. |
+| **FORM** COMMENT should take valid body content. The **BUTTON** SUBMIT/UPDATE should submit the form and show message. | Comment body content filled with valid and inavlid inputs and SUBMIT/UPDATE button clicked. | Form requested valid inputs and form was successfully sent and displayed message. "Your comment has been submitted for approval" | No fix needed. |
+| Comments should be displayed with Name, time, and content. | Comments posted. | Comments displayed Name, time, and content. | No fix needed. |
+| Unapproved comments of logged in user should show with message and grayed out. | Posted unapproved comments. | logged in user's unapproved comments displayed with message "This comment is awaiting approval" and grayed out. | No fix needed. |
+
 
 ### TESTIMONIALS PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
@@ -319,23 +344,37 @@ A new testimonial form has been submitted and tested.
 | **FORM** NEW TESTIMONIAL should take valid name, email, testimonial and rating. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Your testimonial form has been submitted". | No fix needed. |
 | Testimonial page should display all approved testimonials with name, testimonial and ratings. | Add approved and unapproved testimonials. | Only approved testimonials with name, testimonial and ratings were displayed. | No fix needed. |
 
+
 ### ABOUT PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | **BUTTON** ABOUT on click should open About page. | ABOUT button clicked. | ABOUT button on click opened the about page. | No fix needed. |
 | **FORM** COLLABORATE should take valid name, email, and message. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Collaboration request received! I endeavour to respond within 2 working days.". | No fix needed. |
 | About page should display a title, picture, updated on and content submitted by admin. | Upload picture, update title and content on Admin panel. | The about page displayed the title, picture, updated on and content submitted by admin. | No fix needed. |
-|  |  |  | No fix needed. |
+
 
 ### NEW ARTICLE PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | **BUTTON** SUBMIT NEW ARTICLE on click should open new article page. | SUBMIT NEW ARTICLE button clicked. | SUBMIT NEW ARTICLE button on click opened the new article page. | No fix needed. |
-| **FORM** ARTICLE should take valid title, category and content. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "". | No fix needed. |
-|  |  |  | No fix needed. |
-|  |  |  | No fix needed. |
+| **FORM** ARTICLE should take valid title, category and content. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Article submited successfully and is awaiting approval.". | No fix needed. |
+| Submit article page should display guidlines and submission process. | Opened submit article page. | Submit article page displays all guidelines and submission process. | No fix needed. |
 
 
+### FOOTER
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| Footer should be displayed on all pages at the bottom. | Visit all pages. | Footer displayed on all pages at the bottom. | No fix needed. |
+| **LINKS** SOCIAL MEDIA on click should open respective sites and in a seperate tab. | SOCIAL MEDIA links clicked. | SOCIAL MEDIA links on click opened respective sites and in seperate tabs. | No fix needed. |
+
+
+### FOOTER
+| **Expected** | **Testing** | **Result** | **Fix** |
+|--------------|-------------|------------|---------|
+| Log in as admin/superuser. | User admin/superuser credentials to log in. | Log in to Admin panel as admin/superuser. | No fix needed. |
+|  |  |  | No fix needed. |
+|  |  |  | No fix needed. |
+|  |  |  | No fix needed. |
 
 
 | **Expected** | **Testing** | **Result** | **Fix** |
