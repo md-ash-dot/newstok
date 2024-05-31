@@ -51,9 +51,9 @@
                                 {% if user.is_authenticated and article.author == user %}
                                 <li class="list-group-item d-flex justify-content-between">
                                     <button class="btn btn-delete {% if not article.approved %}btn-delete-greyed-out{% endif %}" 
-                                    onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')"><i class="fa-solid fa-trash"></i></button>
+                                    onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete</button>
                                     <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-edit 
-                                    {% if not article.approved %}btn-edit-greyed-out{% endif %}"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    {% if not article.approved %}btn-edit-greyed-out{% endif %}">Edit</a>
                                 </li>
                                 {% endif %}
                             </ul>
