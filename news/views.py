@@ -318,7 +318,7 @@ def new_article(request, slug=None):
 
 @login_required
 def delete_article(request, slug):
-     """
+    """
     Delete an individual article.
 
     **Context**
