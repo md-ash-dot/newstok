@@ -1,13 +1,16 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from news.models import Article, Comment
 from news.forms import CommentForm
 
 
+
+
 # Create your views here.
-class ArticleList(generic.ListView):
+class ArticleList(LoginRequiredMixin,generic.ListView):
     """
     Displays User profile Articles in a List View from
     :model:`news.Article`.
@@ -30,7 +33,7 @@ class ArticleList(generic.ListView):
         return Article.objects.filter(author=self.request.user)
 
 
-class CommentList(generic.ListView):
+class CommentList(LoginRequiredMixin, generic.ListView):
     """
     Displays User profile Comments in a List View from
     :model:`news.Comment`.
