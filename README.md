@@ -368,11 +368,15 @@ A new testimonial form has been submitted and tested.
 | **LINKS** SOCIAL MEDIA on click should open respective sites and in a seperate tab. | SOCIAL MEDIA links clicked. | SOCIAL MEDIA links on click opened respective sites and in seperate tabs. | No fix needed. |
 
 
-### FOOTER
+### ADMIN PANEL
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | Log in as admin/superuser. | User admin/superuser credentials to log in. | Log in to Admin panel as admin/superuser. | No fix needed. |
-|  |  |  | No fix needed. |
+| ABOUT |  |  | No fix needed. |
+| COLLABORATE REQUESTS |  |  | No fix needed. |
+| ARTICLES |  |  | No fix needed. |
+| COMMENTS |  |  | No fix needed. |
+| TESTIMONIALS |  |  | No fix needed. |
 |  |  |  | No fix needed. |
 |  |  |  | No fix needed. |
 
