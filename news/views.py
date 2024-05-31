@@ -115,7 +115,7 @@ def article_detail(request, slug):
     ``article``
         An instance of :model:`news.Article`.
     ``comments``
-        All approved comments related to the article.
+       All comments related to the article, ordered by creation date.
     ``comment_count``
         A count of approved comments related to the article.
     ``comment_form``
@@ -276,7 +276,7 @@ def new_article(request, slug=None):
     **Context**
 
     ``article``
-        An instance of :model:`news.Article`.
+        An instance of :model:`news.Article`, if editing an existing article.
     ``article_form``
         An instance of :form:`news.ArticleForm`.
 
@@ -318,6 +318,18 @@ def new_article(request, slug=None):
 
 @login_required
 def delete_article(request, slug):
+     """
+    Delete an individual article.
+
+    **Context**
+
+    ``article``
+        An instance of :model:`news.Article`.
+
+    **Template:**
+
+    :view:`user_profile_posts`
+    """
     article = get_object_or_404(Article, slug=slug)
 
     if article.author == request.user:
