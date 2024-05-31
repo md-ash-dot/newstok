@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from .models import Article, Comment
 from .forms import CommentForm, ArticleForm
-from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 
@@ -155,7 +156,7 @@ def article_detail(request, slug):
         },
     )
 
-
+@login_required
 def upvote_article(request, slug):
     """
     Up-vote an individual article.
@@ -183,7 +184,7 @@ def upvote_article(request, slug):
     article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
-
+@login_required
 def downvote_article(request, slug):
     """
     Down-vote an individual article.
@@ -212,7 +213,7 @@ def downvote_article(request, slug):
     article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
-
+@login_required
 def comment_edit(request, slug, comment_id):
     """
     Display an individual comment for edit.
@@ -267,7 +268,7 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 
-
+@login_required
 def new_article(request, slug=None):
     """
     Display a form for submitting a new article to :model:`news.Article` or editing an existing article.
