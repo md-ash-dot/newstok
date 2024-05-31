@@ -296,9 +296,10 @@ def new_article(request, slug=None):
             article.slug = slugify(article.title)
             article.author = request.user
 
-            # Set approved to False when editing
+            # Set approved to False and staus to draft when editing
             if slug:
                 article.approved = False
+                article.status = 0
 
             article.save()
             messages.success(request, 'Article submitted successfully and is awaiting approval.' 
