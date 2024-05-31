@@ -248,26 +248,9 @@ The website uses a responsive design for users to enjoy it across devices. The w
   
 ![Responsive mobile](/images_readme/responsive-mobile.png)
 
-## TESTING
-
-- This website has been tested to check if it works on different browsers such as Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, and Samsung Internet.
-- The website has been tested using the dev tools device toolbar on the browser to check if it functions and looks good on all standard screen sizes, showing it uses a responsive design.
-- All text on the website has been checked to see if it is readable and easy to understand.
-- All buttons on the website, used to navigate and operate the website have been tested and are in good working order.
-- New articles have been posted and styled to check if it is displayed.
-- New comments have been posted and approved to check if it is displayed.
-- The categories section has been tested to see if they filter articles to display. All categories tested.
-- Register, login, and logout functions have been tested.
-- The Profile page has been tested to see if logged-in users see their articles posts and comments.
-- The About page has been checked to see if the content and picture are updated. 
-- The testimonial page has been checked to see if it is updated after admin publishes a testimonial.
-The collaboration request form has been submitted and tested.
-- Submit new article form has been submitted and tested.
-A new testimonial form has been submitted and tested.
-- All admin sections have been tested.
+## MANUAL TESTING
 
 ### GENERAL
-
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | Website works on different browsers such as Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, and Samsung Internet. | Tested the website on all mentioned browsers. | The website acted as normally and it worked on all browsers. | No fix needed. |
@@ -291,7 +274,6 @@ A new testimonial form has been submitted and tested.
 | **BUTTON** CATEGORIES on click should display all categories. | CATEGORIES button clicked. | CATEGORIES button on click displayed a drop down menu with all categories. | No fix needed. |
 | **BUTTON** GENERAL, BUSINESS, SCIENCE, TECHNOLOGY on click should open page with respective articles. | GENERAL, BUSINESS, SCIENCE, TECHNOLOGY buttons clicked. | On click of all category list buttons respective articles displayed. | No fix needed. |
 
-
 ### AUTHENTICATION
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
@@ -302,9 +284,8 @@ A new testimonial form has been submitted and tested.
 | **BUTTON** LOGOUT on click should load sign out page. | LOGOUT button clicked. | LOGOUT button on click loaded the sign out page. | No fix needed. |
 | **BUTTON** SIGNOUT on click should log user out and display message. | SIGNOUT button was clicked on signout page. | SIGNOUT button on click logged user out and displayed message "You have signed out." | No fix needed. |
 | **FORM** SIGN UP should take valid username, email, password and password again. The **BUTTON** SIGN UP should submit the form and register user. | All fields filled with valid and inavlid inputs and SIGN UP button clicked. | Form requested valid inputs and form was successfully sent and registered user. | No fix needed. |
-| **FORM** SIGN IN should take valid username , password and remember me checkbox. The **BUTTON** SIGN IN should submit the form and log in the user and display message. | Form requested valid inputs and form was successfully sent and logged in the user and displayed message. "Successfully signed in as "username" |  | No fix needed. |
+| **FORM** SIGN IN should take valid username , password and remember me checkbox. The **BUTTON** SIGN IN should submit the form and log in the user and display message. | SIGN IN form was filled, remember me box was checked and logged in as user. | Form requested valid inputs, remember me box triggered save password and form was successfully sent and logged in the user and displayed message. "Successfully signed in as "username" | No fix needed. |
 | **LINK** SIGN IN and SIGN UP on the register and login page on click should open the respective pages. | SIGN IN and SIGN UP links clicked. | SIGN IN and SIGN UP links on click opened respective pages. | No fix needed. |
-
 
 ### PROFILE PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
@@ -317,7 +298,6 @@ A new testimonial form has been submitted and tested.
 | **BUTTON** DELETE under articles/comments on click should ask for confirmation to delete. | DELETE button clicked. | On click a modal was opened asking for confirmation with DELETE and CLOSE buttons | No fix needed. |
 | **BUTTON** DELETE and CLOSE in modal on click should close the modal or confirm deletion and display message. | DELETE and CLOSE buttons clicked. | CLOSE button on click closed modal. DELETE button on click deleted article/comment and displayed message "Article/Comment deleted". | No fix needed. |
 | **BUTTON** EDIT under articles/comments on click should open page for editing. | EDIT buttons clicked. | EDIT button on click opened pages for editing. | No fix needed. |
-
 
 ### ARTICLE DETAIL PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
@@ -335,7 +315,6 @@ A new testimonial form has been submitted and tested.
 | Comments should be displayed with Name, time, and content. | Comments posted. | Comments displayed Name, time, and content. | No fix needed. |
 | Unapproved comments of logged in user should show with message and grayed out. | Posted unapproved comments. | logged in user's unapproved comments displayed with message "This comment is awaiting approval" and grayed out. | No fix needed. |
 
-
 ### TESTIMONIALS PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
@@ -344,14 +323,12 @@ A new testimonial form has been submitted and tested.
 | **FORM** NEW TESTIMONIAL should take valid name, email, testimonial and rating. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Your testimonial form has been submitted". | No fix needed. |
 | Testimonial page should display all approved testimonials with name, testimonial and ratings. | Add approved and unapproved testimonials. | Only approved testimonials with name, testimonial and ratings were displayed. | No fix needed. |
 
-
 ### ABOUT PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | **BUTTON** ABOUT on click should open About page. | ABOUT button clicked. | ABOUT button on click opened the about page. | No fix needed. |
 | **FORM** COLLABORATE should take valid name, email, and message. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Collaboration request received! I endeavour to respond within 2 working days.". | No fix needed. |
 | About page should display a title, picture, updated on and content submitted by admin. | Upload picture, update title and content on Admin panel. | The about page displayed the title, picture, updated on and content submitted by admin. | No fix needed. |
-
 
 ### NEW ARTICLE PAGE
 | **Expected** | **Testing** | **Result** | **Fix** |
@@ -360,44 +337,22 @@ A new testimonial form has been submitted and tested.
 | **FORM** ARTICLE should take valid title, category and content. The **BUTTON** SUBMIT should submit the form and display message. | All fields filled with valid and inavlid inputs and SUBMIT button clicked. | Form requested valid inputs and form was successfully sent and displayed message "Article submited successfully and is awaiting approval.". | No fix needed. |
 | Submit article page should display guidlines and submission process. | Opened submit article page. | Submit article page displays all guidelines and submission process. | No fix needed. |
 
-
 ### FOOTER
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | Footer should be displayed on all pages at the bottom. | Visit all pages. | Footer displayed on all pages at the bottom. | No fix needed. |
 | **LINKS** SOCIAL MEDIA on click should open respective sites and in a seperate tab. | SOCIAL MEDIA links clicked. | SOCIAL MEDIA links on click opened respective sites and in seperate tabs. | No fix needed. |
 
-
 ### ADMIN PANEL
 | **Expected** | **Testing** | **Result** | **Fix** |
 |--------------|-------------|------------|---------|
 | Log in as admin/superuser. | User admin/superuser credentials to log in. | Log in to Admin panel as admin/superuser. | No fix needed. |
-| ABOUT |  |  | No fix needed. |
-| COLLABORATE REQUESTS |  |  | No fix needed. |
-| ARTICLES |  |  | No fix needed. |
-| COMMENTS |  |  | No fix needed. |
-| TESTIMONIALS |  |  | No fix needed. |
-|  |  |  | No fix needed. |
-|  |  |  | No fix needed. |
-
-
-| **Expected** | **Testing** | **Result** | **Fix** |
-|--------------|-------------|------------|---------|
-| All buttons used to navigate and operate the website are in good working order. | Clicked all buttons to ensure they perform their intended actions. | All buttons are working correctly. | No fix needed. |
-| New articles are displayed properly. | Posted new articles and checked their display. | Articles displayed correctly with the intended styling. | No fix needed. |
-| New comments are posted and approved properly. | Posted and approved new comments to check their display. | Comments are displayed correctly after approval. | No fix needed. |
-| Categories section filters articles correctly. | Tested each category to ensure articles are filtered and displayed correctly. | Categories filter articles correctly. | No fix needed. |
-| Register, login, and logout functions work correctly. | Tested the registration, login, and logout functionalities. | All functionalities worked correctly. | No fix needed. |
-|--------------|-------------|------------|---------|
-| Profile page shows logged-in users their articles, posts, and comments. | Logged in and checked the profile page for user-specific content. | Profile page displays the user's articles, posts, and comments correctly. | No fix needed. |
-| About page content and picture are updated. | Checked the About page for updated content and picture. | About page content and picture are updated correctly. | No fix needed. |
-| Testimonial page updates after admin publishes a testimonial. | Published a testimonial as admin and checked the testimonial page. | Testimonial page updates correctly with the new testimonial. | No fix needed. |
-| Collaboration request form submission works. | Submitted a collaboration request form. | Form submitted and response handled correctly. | No fix needed. |
-|--------------|-------------|------------|---------|
-| Submit new article form submission works. | Submitted a new article form. | Form submitted and article published correctly. | No fix needed. |
-| New testimonial form submission works. | Submitted a new testimonial form. | Form submitted and testimonial processed correctly. | No fix needed. |
-| All admin sections work correctly. | Tested all admin functionalities and sections. | All admin sections work correctly. | No fix needed. |
-
+| ABOUT section should take a title, image, content, summernote editor and update the about page on save. | Added title, image, content with summernote editor. | The about admin panel section added, edited and saved all fields. | No fix needed. |
+| COLLABORATE REQUESTS should take the form with inputs, email, message and recieve it for review and mark to read. | Colloborate form was filled and sent. | All fields were shown on admin panel and was marked read. | No fix needed. |
+| ARTICLES section should show title, slug, category, author, image uploader, content, ecerpt, votes, voted users, approved check box and status for published and draft. | Submitted article form, updated fields and approved, published. Edited article through form and checked status and approval. | Article form on submission was sent to Admin and on filling fields and publishing article was published. O  editing through article form, form status was changed to draft and unapproved. | No fix needed. |
+| COMMENTS section should take comment form content and show article, author, body, approval staus. | Comments were posted and edited. | On comment form submission admin panel showed all fields and on approval comments were visible. On editing comment approval status was changed. | No fix needed. |
+| TESTIMONIALS section shoukld take form name, email, testimonial, rating, status. | Testimonial form was filled and sent. | On form submission, all fields were sent to admin panel and on changing status testimonial was published. | No fix needed. |
+| All admin features should function properly. | All sections of admin panel and features were used. | All admin panel sections and it's  features functioned properly. | No fix needed. |
 
 
 ### VALIDATOR TESTING
