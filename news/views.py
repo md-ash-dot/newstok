@@ -18,14 +18,14 @@ class ArticleList(generic.ListView):
     **Context**
 
     ``queryset``
-        A filter of articles with satus 1 published.
+        Filters of articles with satus 1 published and approved.
     ``paginate_by``
         Pagination by a value of 6.
     **Template:**
 
     :template:`news/index.html`
     """
-    queryset = Article.objects.filter(status=1)
+    queryset = Article.objects.filter(status=1, approved=True)
     template_name = "news/index.html"
     paginate_by = 6
 
