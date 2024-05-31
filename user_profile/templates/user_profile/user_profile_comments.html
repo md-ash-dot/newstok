@@ -35,21 +35,23 @@
           <div id="comment{{ comment.id }}">
             {{ comment.body | linebreaks }}
           </div>
+          <!-- Comment awaiting approval message -->
           {% if not comment.approved and comment.author == user %}
           <p class="approval">This comment is awaiting approval</p>
           {% endif %}
+          <!-- Comment delete and edit buttons -->
           {% if user.is_authenticated and comment.author == user %}
           <a href="#"><button class="btn btn-delete {% if not comment.approved %}btn-delete-greyed-out{% endif %}"
               data-comment_id="{{ comment.id }}" slug="{{ comment.article.slug }}">Delete</button></a>
           <a href="../{{ comment.article.slug }}/edit_comment/{{ comment.id }}">
             <button class="btn btn-edit {% if not comment.approved %}btn-edit-greyed-out{% endif %}"
               data-comment_id="{{ comment.id }}">Edit</button></a>
-
           {% endif %}
         </div>
 
         <!-- Our for loop ends here -->
         {% endfor %}
+        <!-- Pagination -->
         {% if is_paginated %}
         <nav aria-label="Page navigation">
           <ul class="pagination justify-content-center">
