@@ -309,7 +309,8 @@ def new_article(request, slug=None):
             article.save()
             messages.success(request, 'Article submitted successfully and is awaiting approval.'
             if not slug else 'Article updated successfully and is awaiting approval.')
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+            redirect_url = reverse('user_profile_posts')
+            return HttpResponseRedirect(redirect_url)
     else:
         article_form = ArticleForm(instance=article)
 
