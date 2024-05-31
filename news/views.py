@@ -156,6 +156,7 @@ def article_detail(request, slug):
         },
     )
 
+
 @login_required
 def upvote_article(request, slug):
     """
@@ -183,6 +184,7 @@ def upvote_article(request, slug):
 
     article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
 
 @login_required
 def downvote_article(request, slug):
@@ -212,6 +214,7 @@ def downvote_article(request, slug):
 
     article.save()
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
 
 @login_required
 def comment_edit(request, slug, comment_id):
@@ -245,6 +248,7 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('article_detail', args=[slug]))
 
+
 @login_required
 def comment_delete(request, slug, comment_id):
     """
@@ -267,6 +271,7 @@ def comment_delete(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
 
 @login_required
 def new_article(request, slug=None):
@@ -302,7 +307,7 @@ def new_article(request, slug=None):
                 article.status = 0
 
             article.save()
-            messages.success(request, 'Article submitted successfully and is awaiting approval.' 
+            messages.success(request, 'Article submitted successfully and is awaiting approval.'
             if not slug else 'Article updated successfully and is awaiting approval.')
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
@@ -316,6 +321,7 @@ def new_article(request, slug=None):
             "article_form": article_form
         },
     )
+
 
 @login_required
 def delete_article(request, slug):
