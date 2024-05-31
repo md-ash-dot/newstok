@@ -122,9 +122,9 @@
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
           <button class="btn btn-delete {% if not comment.approved %}btn-delete-greyed-out{% endif %}" 
-          data-comment_id="{{ comment.id }}" slug="{{ comment.article.slug }}"><i class="fa-solid fa-trash"></i></button>
+          data-comment_id="{{ comment.id }}" slug="{{ comment.article.slug }}">Delete</button>
           <button class="btn btn-edit {% if not comment.approved %}btn-edit-greyed-out{% endif %}" 
-          data-comment_id="{{ comment.id }}"><i class="fa-solid fa-pen-to-square"></i></button>
+          data-comment_id="{{ comment.id }}">Edit</i></button>
           {% endif %}
         </div>
         {% endfor %}
