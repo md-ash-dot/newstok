@@ -23,7 +23,7 @@ class ArticleAdmin(SummernoteModelAdmin):
         SummernoteModelAdmin for content.
     """
 
-    list_display = ('title', 'status', 'created_on', 'category', 'approved',)
+    list_display = ('title', 'status', 'created_on', 'category', 'approved', 'status')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on', 'approved')
     prepopulated_fields = {'slug': ('title',)}
