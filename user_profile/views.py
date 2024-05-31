@@ -7,10 +7,8 @@ from news.models import Article, Comment
 from news.forms import CommentForm
 
 
-
-
 # Create your views here.
-class ArticleList(LoginRequiredMixin,generic.ListView):
+class ArticleList(LoginRequiredMixin, generic.ListView):
     """
     Displays User profile Articles in a List View from
     :model:`news.Article`.
