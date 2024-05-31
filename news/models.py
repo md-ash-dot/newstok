@@ -18,7 +18,6 @@ class Article(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     upvotes = models.PositiveIntegerField(default=0)
@@ -26,6 +25,7 @@ class Article(models.Model):
     upvoted_users = models.ManyToManyField(User, related_name='upvoted_articles', blank=True)
     downvoted_users = models.ManyToManyField(User, related_name='downvoted_articles', blank=True)
     approved = models.BooleanField(default=False)
+    status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         ordering = ["-created_on"]
