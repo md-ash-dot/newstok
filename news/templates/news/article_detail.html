@@ -53,14 +53,14 @@
     <p>Logged in as: {{ user.username }}</p>
     <form method="post" action="{% url 'upvote_article' article.slug %}">
       {% csrf_token %}
-      <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up"></i></button>
+      <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-caret-up-square-fill"></i></button>
     </form>
     <div class="score">
       <p>Score: {{ article.score }}</p>
     </div>
     <form method="post" action="{% url 'downvote_article' article.slug %}">
       {% csrf_token %}
-      <button type="submit" class="btn btn-primary btn-sm vote"><i class="fa-solid fa-arrow-down"></i></button>
+      <button type="submit" class="btn btn-primary btn-sm vote"><i class="bi bi-caret-down-square-fill"></i></button>
     </form>
     {% else %}
     <p>Log in to vote</p>
@@ -71,7 +71,7 @@
   <!-- Displaying share button to copy link to clipboard -->
   <div class="row">
     <div class="col-12">
-      <button type="button" class="btn btn-outline-success" onclick="geturl()"><i class="fa-solid fa-share"></i>SHARE</button>
+      <button type="button" class="btn btn-outline-success" onclick="geturl()"><i class="bi bi-share"></i>SHARE</button>
       <script>function geturl() {
           const currentUrl = window.location.href;
           navigator.clipboard.writeText(currentUrl);
