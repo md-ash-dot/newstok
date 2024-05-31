@@ -40,11 +40,10 @@
           {% endif %}
           {% if user.is_authenticated and comment.author == user %}
           <a href="#"><button class="btn btn-delete {% if not comment.approved %}btn-delete-greyed-out{% endif %}"
-              data-comment_id="{{ comment.id }}" slug="{{ comment.article.slug }}"><i
-                class="fa-solid fa-trash"></i></button></a>
+              data-comment_id="{{ comment.id }}" slug="{{ comment.article.slug }}">Delete</button></a>
           <a href="../{{ comment.article.slug }}/edit_comment/{{ comment.id }}">
             <button class="btn btn-edit {% if not comment.approved %}btn-edit-greyed-out{% endif %}"
-              data-comment_id="{{ comment.id }}"><i class="fa-solid fa-pen-to-square"></i></button></a>
+              data-comment_id="{{ comment.id }}">Edit</button></a>
 
           {% endif %}
         </div>
