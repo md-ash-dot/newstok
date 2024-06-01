@@ -77,6 +77,8 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The article's picture is uploaded or the default placeholder image is displayed on the top, making the page look more lively.
   - The title, author and created on date are displayed alongside the article's image. Giving the user all the information they need before proceeding down to the article.
   - The content is featured below the image. The article's content can be styled by the admin before publishing it.
+  - If the article is the user's own article they can see the buttons: Delete Article and edit article.
+  - They can click on delete to delete the article or they can click on edit and edit the article form and submit for approval.
   - A message stating Log in to vote is displayed under the content, prompting users to log in and vote.
   - The Voting section can be found right below the article's content, so users can share their view of the article at the click of a button
   - Users can click on the up-vote or down-vote button and also see the vote's score.
@@ -89,8 +91,10 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The user's comments also display an edit and delete button for each of their comments.
   - The text area for a new comment is displayed for the logged-in users right beside the comments.
 ![Article detail view](/images_readme/detail%20view.png)
+![Article detail view](/images_readme/article%20buttons.png)
 ![Article detail view](/images_readme/vote.png)
 ![Article detail view](/images_readme/comment.png)
+
 
 
 - **REGISTER PAGE**
@@ -120,12 +124,14 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
 
   - The profile page can be accessed by clicking on the profile button by logged-in users on the navigation bar.
   - On clicking they are taken to a page which displays a message, my posts, below which all the article posts of the logged-in user are displayed, in a similar manner to the home page.
+  - The users can delete their posts by clicking delete or click on edit to take them to the article form where they can edit and submit for approval.
   - The users can find a go to your comments button on the top of the page.
   - On clicking on the go to your comments button, they are taken to a page with a message saying my comments, and also a go to your posts button on the top of the page, if they wish to go back to their posts.
   - The user's comments are displayed along with the title of the article to which the particular comment belongs, the unapproved comments are greyed out like in the article detail view.
   - The users can click on edit or the title to take them to the article and edit their comments.
   - They can delete their comment by clicking on the delete button, and reading and accepting the warning message that pops up.
 ![My posts page](/images_readme/profile%20posts.png)
+![My posts page](/images_readme/my_posts.png)
 ![My comments page](/images_readme/profile%20comments.png)
 
 - **NEW ARTICLE PAGE**
@@ -136,6 +142,7 @@ Wireframes were designed using Lucidcharts's online wireframe tool.
   - The filled-out form can be submitted using the submit button after filling out the new article form.
 ![New article guidelines](/images_readme/article%20guideline.png)
 ![New article form](/images_readme/article%20form.png)
+![Update article form](/images_readme/update_article.png)
 
 - **ABOUT PAGE**
 
