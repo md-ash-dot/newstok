@@ -142,7 +142,8 @@ body {
     background: transparent;
 }
 
-.btn-delete {
+.btn-delete,
+.btn-article-delete {
     color: #fff;
     background: #E84610;
 }
