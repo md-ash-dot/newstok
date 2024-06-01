@@ -6,7 +6,7 @@ body {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #ffffff;
 }
 
 .thin {
@@ -36,10 +36,12 @@ body {
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
+    top: 5%;
     min-width: 30%;
-    left: -2px;
-    background-color: #188181;
+    border-radius: 5% 23% 5% 25%;
+    right: -2px;
+    background-color: #05419a;
+    opacity: .8;
 }
 
 .scale {
@@ -63,7 +65,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #05419a;
     color: white;
     position: relative;
 }
@@ -80,11 +82,15 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: #05419a;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
+}
+
+.profile-image{
+    width: 75%;
 }
 
 .article-link {
@@ -136,10 +142,30 @@ body {
     background: transparent;
 }
 
-.btn-delete {
+.btn-delete,
+.btn-article-delete {
     color: #fff;
     background: #E84610;
 }
+
+.btn-delete-greyed-out,
+.btn-edit-greyed-out{
+    color: grey;
+    background-color: lightgrey;
+    border: 1px solid grey;
+  }
+
+.btn-delete-greyed-out:hover {
+color: white;
+background-color: #E84610;
+border-color: #E84610;
+}
+
+.btn-edit-greyed-out:hover {
+    color: white;
+    background-color: #188181;
+    border-color: #188181;
+  }
 
 .btn-like:hover,
 .btn-like:active {
@@ -152,6 +178,24 @@ body {
     color: rgb(172, 175, 175);
 }
 
+.awaiting-approval {
+    opacity: 0.5;
+    /* Additional styling for the faded effect */
+}
+
 .approval {
     color: rgb(222, 146, 168);
 }
+
+.alert {
+    width:45%; 
+    margin-top:10px;   
+ }
+
+ .btn-outline-success {
+    margin-top:10px; 
+ }
+
+ .score {
+    margin-top:10px; 
+ }
