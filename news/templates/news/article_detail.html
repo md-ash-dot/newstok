@@ -38,7 +38,7 @@
   <!-- Edit Article and Delete Article buttons -->
   <div>
     {% if user.is_authenticated and article.author == user %}
-    <button class="btn btn-delete" onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete
+    <button class="btn" onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title }}')">Delete
       Article</button>
     <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-edit">Edit Article</a>
     {% endif %}
