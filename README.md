@@ -418,13 +418,34 @@ The website uses a responsive design for users to enjoy it across devices. The w
 
   - Fix: name profile couldn't be used to create the app so user_profile was used instead.
 
+- Comment delete modal and article delete modal would show up at the same time and content in modal was mixed.
+
+  - Fix: Change button class names and arialabel names to different ones for comment and article buttons.
+
 - content submitted on the admin panel and displayed on the front end displayed in HTML format with p tags etc.
   
   - Fix: {% autoescape off %} {% endautoescape %} was used.
 
+- If title had quotes the button wouldn't work
+
+  - Fix: Add escapejs filter to title.
+
+- Delete buttons on deployed site did not work.
+
+  - Fix: Collect static files using python manage.py collectstatic
+
 
 ## DEPLOYMENT
 
+### GITPOD IDE
+- This site was deployed using Gitpod IDE for development. The steps used to deploy are:
+  - Open GitHub repo with the Gitpod IDE.
+  - Run command in terminal: python3 manage.py runserver
+  - Open port 8000 as a preview or in a browser tab.
+  - Copy paste the hostname between the square brackets of ALLOWED_HOSTS in the newstok/settings.py file, and saved it.
+  - Run command in terminal again: python3 manage.py runserver
+
+### HEROKU
 - This site was deployed using Heroku. The steps used to deploy are:
   - Navigate to the Heroku dashboard and create a new app with a unique name in a region close to you.
   - In the new app’s settings tab, ensure the Config Var DISABLE_COLLECTSTATIC key has a value of 1.
