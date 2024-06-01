@@ -68,7 +68,7 @@
                                 {% if user.is_authenticated and article.author == user %}
                                 <li class="list-group-item d-flex justify-content-between">
                                     <button
-                                        class="btn btn-delete {% if not article.approved %}btn-delete-greyed-out{% endif %}"
+                                        class="btn btn-article-delete {% if not article.approved %}btn-delete-greyed-out{% endif %}"
                                         onclick="openArticleDeleteModal('{{ article.slug }}', '{{ article.title|escapejs }}')">Delete</button>
                                     <a href="{% url 'edit_article' slug=article.slug %}" class="btn btn-edit 
                                     {% if not article.approved %}btn-edit-greyed-out{% endif %}">Edit</a>
@@ -108,11 +108,11 @@
     {% endif %}
 </div>
 <!-- Delete Article Modal -->
-<div class="modal fade" id="articleDeleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal fade" id="articleDeleteModal" tabindex="-1" aria-labelledby="ArticleDeleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete article?</h5>
+                <h5 class="modal-title" id="ArticleDeleteModalLabel">Delete article?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
