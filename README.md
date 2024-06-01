@@ -488,6 +488,6 @@ The live link to the deployed website can be found here - [NEWSTOK](https://news
 - The logo used on the website was generated using IconGeneratorAI [icongeneratorai](https://www.icongeneratorai.com/)
 
 ### PROJECT SUPPORT
-- I would like to thank my mentor Akshat Garg from Code Institute for his support, guidance, and help in planning and building this project.
+- I would like to thank my mentors Rohit Sharma and Akshat Garg from Code Institute for his support, guidance, and help in planning and building this project.
 - I would like to thank all the Code Institute tutors for their support, guidance, and help in solving code issues, debugging, and solving all technical issues faced in building this project.
 - I would like to thank Code Institute for providing me with the necessary lessons and resources to help me build my skills to build this project.
